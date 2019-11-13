@@ -1,0 +1,378 @@
+//FOUNDATION------------------------------
+//COMMON------------------------------
+$key-color: hsl(32, 100%, 50%);
+$black: #333;
+$white: #fafafa;
+$tag-color-blue: hsl(200, 70%, 60%);
+$tag-color-green: hsl(120, 70%, 50%);
+$tag-color-pink: hsl(335, 70%, 70%);
+$border: solid 1px hsl(0, 0%, 85%);
+$bg-stripe: repeating-linear-gradient(
+  -45deg,
+  $white 0px,
+  $white 3px,
+  #eee 3px,
+  #eee 4px
+);
+
+body {
+  background: $bg-stripe;
+  color: $black;
+  font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue",
+    "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
+}
+
+.l-background-pattern {
+  background: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 3px,
+      $white 3px,
+      $white 4px
+    ),
+    repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, $white 3px, $white 4px);
+  height: 232px;
+}
+.l-section-base {
+  background-color: $white;
+  border: $border;
+}
+.l-section-header {
+  align-items: center;
+  background: linear-gradient($white 0%, $white 65%, #eee 100%);
+  border-top: 3px solid $key-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  h3 {
+    font-size: 14px;
+    font-weight: normal;
+    .ruby {
+      margin-left: 6px;
+    }
+  }
+  &-link {
+    cursor: pointer;
+    font-size: 12px;
+    &::before {
+      color: $key-color;
+      content: "\f152";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-right: 4px;
+    }
+  }
+}
+.ruby {
+  color: #bbb;
+  font-size: 10px;
+}
+//CONTENTS------------------------------
+//HEADER------------------------------
+.head-container {
+  background: linear-gradient($white 0%, $white 65%, #eee);
+  display: flex;
+  flex-direction: column;
+  .header {
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 9px,
+        #eee 9px,
+        #eee 10px
+      ),
+      repeating-linear-gradient(#e6e6e6 0px, #dfdfdf 9px, #eee 9px, #eee 10px);
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 0 0 8px;
+    width: 100%;
+    &__door-plate {
+      display: flex;
+    }
+    &__logo {
+      align-self: center;
+      & img {
+        height: 40px;
+      }
+    }
+    &__company-name {
+      align-self: center;
+      color: $key-color;
+      font-family: YuMincho;
+      font-size: 22px;
+      margin-left: 6px;
+    }
+    &__menus {
+      display: flex;
+    }
+    &__site-menu {
+      display: flex;
+      font-size: 12px;
+      height: 16px;
+      justify-content: flex-end;
+      list-style: none;
+      margin-top: 6px;
+      width: 360px;
+      li {
+        display: flex;
+        margin-left: 15px;
+        i {
+          vertical-align: -4px;
+        }
+        p {
+          font-family: YuGothic;
+          margin-left: 4px;
+        }
+      }
+    }
+    &__font-menu {
+      background-color: $key-color;
+      border-radius: 0 0 6px 6px;
+      color: $white;
+      font-size: 12px;
+      height: 32px;
+      margin-left: 16px;
+      text-align: center;
+      width: 184px;
+      th {
+        color: $white;
+        font-weight: normal;
+        width: 80px;
+      }
+      td {
+        border-left: $border;
+        cursor: pointer;
+        width: 34px;
+        &:hover {
+          background-color: lighten($key-color, 15%);
+        }
+      }
+    }
+  }
+  //NAV------------------------------
+  .nav {
+    display: flex;
+    height: 56px;
+    margin: 8px auto 0;
+    max-width: 960px;
+    width: 100%;
+    ul {
+      background: $white;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      width: 100%;
+      li {
+        background: linear-gradient($white 0, $white 25%, #eee 100%);
+        box-shadow: 0 1px 1px 0px #e0e0e0;
+        display: flex;
+        flex: 0 1 157px;
+        flex-direction: column;
+        font-size: 14px;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//MAIN------------------------------
+.main-wrapper {
+  max-width: 960px;
+  overflow-x: hidden;
+  position: relative;
+  top: -218px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+// TOP IMAGE------------------------------l
+.main__top-images {
+  background-color: lightgray;
+  border: $border;
+  color: $white;
+  display: block;
+  font-size: 36px;
+  height: 240px;
+  line-height: 240px;
+  text-align: center;
+  width: 100%;
+}
+
+// MAIN CONTAINER------------------------------
+.main-container {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.main__upper-container {
+  display: flex;
+  justify-content: space-between;
+  // NEWS------------------------------
+  .main__news {
+    flex: 0 1 628px;
+    height: 498px;
+    &-header {
+      height: 44px;
+    }
+    &-body {
+      height: 452px;
+      overflow-y: scroll;
+      padding: 15px;
+      li {
+        border-bottom: 1px dashed #ccc;
+        display: flex;
+        font-size: 14px;
+        padding: 8px;
+      }
+      time {
+        align-self: center;
+        flex: 1 1 82px;
+      }
+      &-tag {
+        align-self: center;
+        border-radius: 4px;
+        color: $white;
+        flex: 1 1 72px;
+        height: 20px;
+        line-height: 20px;
+        margin-left: 8px;
+        text-align: center;
+        &.c-blue {
+          background-color: $tag-color-blue;
+        }
+        &.c-green {
+          background-color: $tag-color-green;
+        }
+        &.c-pink {
+          background-color: $tag-color-pink;
+        }
+      }
+      p {
+        flex: 1 1 454px;
+        margin-left: 16px;
+      }
+    }
+  }
+  // RIGHT COLUMN------------------------------
+  .main__right-column {
+    display: flex;
+    flex: 0 1 320px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 12px;
+    // MESSAGE------------------------------
+    &__message {
+      display: flex;
+      height: 120px;
+      &-head-container {
+        border-right: $border;
+        flex: 0 1 188px;
+      }
+      h3 {
+        border-bottom: $border;
+        color: $key-color;
+        cursor: pointer;
+        display: flex;
+        height: 24px;
+        justify-content: space-between;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 24px;
+        padding: 0 12px;
+        &:hover {
+          background: #f5f5f5;
+        }
+        &::after {
+          content: "\f0da";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+        }
+      }
+      &-heading {
+        font-size: 12px;
+        height: 70px;
+        padding: 3px 12px 0px;
+      }
+      &-ceo-img {
+        align-items: center;
+        display: flex;
+        flex: 0 1 132px;
+        justify-content: center;
+        & img {
+          height: 95%;
+          width: 96%;
+        }
+      }
+    }
+    // IR------------------------------
+    &__ir {
+      height: 280px;
+      &-header {
+        height: 40px;
+      }
+      &-body-upper {
+        display: flex;
+
+        &-left {
+          background: #caa;
+          flex: 0 1 160px;
+        }
+        &-right {
+          background: #aac;
+          flex: 0 1 160px;
+        }
+      }
+    }
+    // RECRUIT------------------------------
+    &__recruit {
+      height: 80px;
+    }
+  }
+}
+
+.main__lower-container {
+  height: 284px;
+  margin-top: 16px;
+}
+
+.second-nav {
+  background-color: #fffff4;
+  height: 40px;
+  margin-top: -218px;
+  &__nav-area {
+    max-width: 960px;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+    }
+  }
+}
+
+.guide-wrapper {
+  background-color: #fafafa;
+  margin: 16px auto 0;
+  max-width: 960px;
+  .banner-container {
+    height: 144px;
+  }
+  .index-container {
+    height: 360px;
+  }
+}
+
+footer {
+  background: #c4c4c4;
+  color: #fafafa;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  height: 120px;
+  text-align: center;
+}
