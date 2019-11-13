@@ -7,29 +7,17 @@ $tag-color-blue: hsl(200, 70%, 60%);
 $tag-color-green: hsl(120, 70%, 50%);
 $tag-color-pink: hsl(335, 70%, 70%);
 $border: solid 1px hsl(0, 0%, 85%);
-$bg-stripe: repeating-linear-gradient(
-  -45deg,
-  $white 0px,
-  $white 3px,
-  #eee 3px,
-  #eee 4px
-);
+$bg-stripe: repeating-linear-gradient(-45deg, $white 0px, $white 3px, #eee 3px, #eee 4px);
 
 body {
   background: $bg-stripe;
   color: $black;
-  font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue",
-    "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
+  font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue", "Hiragino Sans", "ヒラギノ角ゴ ProN W3",
+    Arial, メイリオ, Meiryo, sans-serif;
 }
 
 .l-background-pattern {
-  background: repeating-linear-gradient(
-      45deg,
-      transparent 0,
-      transparent 3px,
-      $white 3px,
-      $white 4px
-    ),
+  background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, $white 3px, $white 4px),
     repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, $white 3px, $white 4px);
   height: 232px;
 }
@@ -74,13 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   .header {
-    background: repeating-linear-gradient(
-        90deg,
-        transparent 0px,
-        transparent 9px,
-        #eee 9px,
-        #eee 10px
-      ),
+    background: repeating-linear-gradient(90deg, transparent 0px, transparent 9px, #eee 9px, #eee 10px),
       repeating-linear-gradient(#e6e6e6 0px, #dfdfdf 9px, #eee 9px, #eee 10px);
     display: flex;
     height: 64px;
@@ -315,15 +297,23 @@ body {
         height: 40px;
       }
       &-body-upper {
+        border-bottom: $border;
         display: flex;
-
-        &-left {
-          background: #caa;
-          flex: 0 1 160px;
-        }
+        height: 128px;
+        &-left,
         &-right {
-          background: #aac;
           flex: 0 1 160px;
+          font-size: 12px;
+          padding-top: 12px;
+          text-align: center;
+          img {
+            height: 88px;
+          }
+          img:hover,
+          p:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
         }
       }
     }
