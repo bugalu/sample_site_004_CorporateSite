@@ -99,6 +99,7 @@ body {
       margin-top: 6px;
       width: 360px;
       li {
+        cursor: pointer;
         display: flex;
         margin-left: 15px;
         i {
@@ -144,14 +145,14 @@ body {
     ul {
       background: $white;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       list-style: none;
       width: 100%;
       li {
         background: linear-gradient($white 0, $white 25%, #eee 100%);
         box-shadow: 0 1px 1px 0px #e0e0e0;
         display: flex;
-        flex: 0 1 157px;
+        flex: 0 1 156px;
         flex-direction: column;
         font-size: 14px;
         justify-content: center;
@@ -302,18 +303,22 @@ body {
         height: 128px;
         &-left,
         &-right {
+          display: flex;
           flex: 0 1 160px;
           font-size: 12px;
-          padding-top: 12px;
+          justify-content: center;
+          padding-top: 8px;
           text-align: center;
           img {
-            height: 88px;
+            height: 96px;
           }
-          img:hover,
-          p:hover {
-            cursor: pointer;
-            opacity: 0.7;
-          }
+        }
+      }
+      &-booklet {
+        cursor: pointer;
+        width: 72px;
+        &:hover {
+          opacity: 0.7;
         }
       }
     }
