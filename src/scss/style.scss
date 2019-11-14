@@ -300,17 +300,17 @@ body {
       &-body-upper {
         border-bottom: $border;
         display: flex;
-        height: 128px;
+        height: 148px;
         &-left,
         &-right {
           display: flex;
           flex: 0 1 160px;
           font-size: 12px;
           justify-content: center;
-          padding-top: 8px;
+          padding-top: 12px;
           text-align: center;
           img {
-            height: 96px;
+            height: 108px;
           }
         }
       }
@@ -321,6 +321,33 @@ body {
           opacity: 0.7;
         }
       }
+      &-body-lower {
+        align-items: center;
+        display: flex;
+        height: 90px;
+        justify-content: space-around;
+        &-index {
+          font-size: 0.8rem;
+          list-style: none;
+          li {
+            align-items: center;
+            display: flex;
+            height: 28px;
+            a {
+              margin-left: 4px;
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+            &:before {
+              color: $key-color;
+              content: "\f0da";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+            }
+          }
+        }
+      }
     }
     // RECRUIT------------------------------
     &__recruit {
@@ -329,6 +356,7 @@ body {
   }
 }
 
+// MAIN-LOWER-CONTAINER------------------------------
 .main__lower-container {
   height: 284px;
   margin-top: 16px;
