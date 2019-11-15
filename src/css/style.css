@@ -588,6 +588,18 @@ body {
 .guide__banner-area h3 {
   font-size: 0.7rem;
   font-weight: normal;
+  position: relative;
+}
+
+.guide__banner-area h3:after {
+  background: #bbb;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  left: 128px;
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
 .guide__banner-deck {
@@ -600,15 +612,26 @@ body {
 }
 
 .guide__banner {
-  margin: 12px 12px 16px 0;
+  cursor: pointer;
+  margin: 12px 12px 8px 0;
 }
 
 .guide__banner:nth-of-type(6n) {
   margin-right: 0;
 }
 
+.guide__banner:hover {
+  opacity: 0.7;
+}
+
 .guide__index {
-  height: 360px;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
 }
 
 footer {
