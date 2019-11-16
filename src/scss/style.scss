@@ -201,15 +201,16 @@ body {
 }
 // TOP IMAGE------------------------------l
 .main__top-images {
-  background-color: lightgray;
+  background: $white;
   border: $border;
-  color: $white;
+  cursor: pointer;
   display: block;
-  font-size: 36px;
-  height: 240px;
+  height: 304px;
   line-height: 240px;
-  text-align: center;
   width: 100%;
+  img:hover {
+    opacity: 0.8;
+  }
 }
 
 // MAIN CONTAINER------------------------------
@@ -222,7 +223,7 @@ body {
   display: flex;
   justify-content: space-between;
   // NEWS------------------------------
-  .main__news {
+  .main__info {
     flex: 0 1 635px;
     height: 498px;
     &-header {
@@ -352,11 +353,14 @@ body {
     // RECRUIT------------------------------
     &__recruit {
       align-items: center;
+      cursor: pointer;
       display: flex;
       height: 80px;
       justify-content: center;
-      &-container {
-        background: #dddddd;
+      &:hover {
+        opacity: 0.7;
+      }
+      img {
         display: flex;
         height: 68px;
         width: 300px;
@@ -400,6 +404,7 @@ body {
       li {
         font-size: 12px;
         i {
+          color: $key-color;
           margin-right: 4px;
         }
       }
@@ -433,7 +438,6 @@ body {
         left: 128px;
         right: 0;
         top: 50%;
-        // width: 600px;
       }
     }
   }
@@ -471,9 +475,7 @@ body {
   }
   &__index-body {
     list-style: none;
-    &::nth-last-of-type() {
-      margin-top: 6px;
-    }
+    margin-top: 6px;
     li {
       font-size: 0.8rem;
       height: 1.8rem;
@@ -492,6 +494,7 @@ body {
       }
     }
     &.news {
+      margin-top: 0;
       li:before {
         content: "\f152";
         margin-right: 4px;
