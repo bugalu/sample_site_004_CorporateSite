@@ -208,9 +208,15 @@ body {
   height: 304px;
   line-height: 240px;
   width: 100%;
+  img {
+    transition: 1.5s;
+  }
   img:hover {
     opacity: 0.8;
   }
+}
+.transparent {
+  opacity: 0;
 }
 
 // MAIN CONTAINER------------------------------

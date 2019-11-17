@@ -281,8 +281,17 @@ body {
   width: 100%;
 }
 
+.main__top-images img {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
 .main__top-images img:hover {
   opacity: 0.8;
+}
+
+.transparent {
+  opacity: 0;
 }
 
 .main-container {
