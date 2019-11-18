@@ -227,7 +227,7 @@ body {
   width: 100%;
 }
 
-.head-container .nav ul {
+.head-container .nav > ul {
   -ms-flex-pack: distribute;
   background: #fafafa;
   display: -webkit-box;
@@ -238,27 +238,91 @@ body {
   width: 100%;
 }
 
-.head-container .nav ul li {
+.head-container .nav > ul > li {
   -ms-flex: 0 1 156px;
   -ms-flex-direction: column;
-  -ms-flex-pack: center;
+  -ms-flex-pack: start;
   -webkit-box-direction: normal;
   -webkit-box-flex: 0;
   -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
+  -webkit-box-pack: start;
   -webkit-box-shadow: 0 1px 1px 0px #e0e0e0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(25%, #fafafa), to(#eee));
   background: -webkit-linear-gradient(#fafafa 0, #fafafa 25%, #eee 100%);
   background: linear-gradient(#fafafa 0, #fafafa 25%, #eee 100%);
   box-shadow: 0 1px 1px 0px #e0e0e0;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex: 0 1 156px;
   flex-direction: column;
   font-size: 14px;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 10px;
   text-align: center;
+}
+
+.head-container .nav > ul > li:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(25%, #eee), to(#fafafa));
+  background: -webkit-linear-gradient(#eee 0, #eee 25%, #fafafa 100%);
+  background: linear-gradient(#eee 0, #eee 25%, #fafafa 100%);
+}
+
+.head-container .nav > ul > li:hover > ul {
+  -webkit-transition: 0.2s ease-in-out;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+  visibility: visible;
+}
+
+.head-container .nav > ul > li > ul {
+  -ms-flex-direction: column;
+  -ms-flex-pack: start;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: start;
+  -webkit-transition: 0.3s ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 14px;
+  opacity: 0;
+  transition: 0.3s ease-in;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.head-container .nav > ul > li > ul > li {
+  -ms-flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  background: #fafafa;
+  border-bottom: solid 1px #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  height: 36px;
+  justify-content: center;
+}
+
+.head-container .nav > ul > li > ul > li:hover {
+  background: #ffac4d;
+}
+
+.head-container .nav > ul > li > ul > li:hover a {
+  color: #fafafa;
+}
+
+.head-container .nav > ul > li > ul > li a {
+  color: #333;
+  font-size: 0.7rem;
+  text-decoration: none;
 }
 
 .main-wrapper {

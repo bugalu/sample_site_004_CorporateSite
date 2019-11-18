@@ -169,21 +169,60 @@ body {
     margin: 8px auto 0;
     max-width: 960px;
     width: 100%;
-    ul {
+    > ul {
       background: $white;
       display: flex;
       justify-content: space-around;
       list-style: none;
       width: 100%;
-      li {
+      > li {
         background: linear-gradient($white 0, $white 25%, #eee 100%);
         box-shadow: 0 1px 1px 0px #e0e0e0;
+        cursor: pointer;
         display: flex;
         flex: 0 1 156px;
         flex-direction: column;
         font-size: 14px;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 10px;
         text-align: center;
+        &:hover {
+          background: linear-gradient(#eee 0, #eee 25%, $white 100%);
+        }
+        &:hover > ul {
+          opacity: 1;
+          visibility: visible;
+          transition: 0.2s ease-in-out;
+        }
+        > ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-top: 14px;
+          z-index: 1;
+          opacity: 0;
+          transition: 0.3s ease-in;
+          visibility: hidden;
+          > li {
+            background: $white;
+            border-bottom: $border;
+            display: flex;
+            flex-direction: column;
+            height: 36px;
+            justify-content: center;
+            &:hover {
+              background: lighten($key-color, 15%);
+              a {
+                color: $white;
+              }
+            }
+            a {
+              color: $black;
+              font-size: 0.7rem;
+              text-decoration: none;
+            }
+          }
+        }
       }
     }
   }

@@ -1,5 +1,6 @@
 "use strict";
 {
+  // slideshow------------------------------
   const slide = document.getElementById("slide");
   const img = new Array(
     "./img/top-image1.jpg",
@@ -24,4 +25,7 @@
       }, 1500);
     }, 7000);
   }
+
+  // drop down menu------------------------------
+
 }
