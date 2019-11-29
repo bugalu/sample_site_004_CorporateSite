@@ -23,6 +23,9 @@ body {
   background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, $white 3px, $white 4px),
     repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, $white 3px, $white 4px);
   height: 232px;
+  @media screen and (max-width: 959px) {
+    display: none;
+  }
 }
 .l-section-base {
   background-color: $white;
@@ -35,7 +38,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 12px;
-  h3 {
+  h2 {
     font-size: 1.4rem;
     font-weight: normal;
     .ruby {
@@ -114,11 +117,41 @@ body {
       align-self: center;
       color: $key-color;
       font-family: YuMincho;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       margin-left: 6px;
+      span {
+        font-size: 1.6rem;
+        letter-spacing: -2px;
+        vertical-align: text-bottom;
+      }
     }
     &__menus {
+      @media screen and (max-width: 959px) {
+        display: none;
+      }
       display: flex;
+    }
+    &__menus-tablet {
+      @media screen and (max-width: 959px) {
+        align-items: center;
+        align-self: center;
+        color: $key-color;
+        display: flex;
+        margin-right: 1.2rem;
+        button {
+          background: #fafafa;
+          border: 2px solid $key-color;
+          border-radius: 4px;
+          font-size: 1.2rem;
+          height: 2.2rem;
+          width: 8rem;
+        }
+        i {
+          font-size: 3.2rem;
+          margin-left: 1.6rem;
+        }
+      }
+      display: none;
     }
     &__site-menu {
       display: flex;
@@ -128,17 +161,17 @@ body {
       list-style: none;
       margin-top: 6px;
       width: 360px;
-      li {
-        cursor: pointer;
-        display: flex;
-        margin-left: 15px;
-        i {
-          vertical-align: -4px;
-        }
-        p {
-          font-family: YuGothic;
-          margin-left: 4px;
-        }
+    }
+    li {
+      cursor: pointer;
+      display: flex;
+      margin-left: 15px;
+      i {
+        vertical-align: -4px;
+      }
+      p {
+        font-family: YuGothic;
+        margin-left: 4px;
       }
     }
     &__font-menu {
@@ -165,65 +198,68 @@ body {
       }
     }
   }
-  //NAV------------------------------
-  .nav {
+}
+//NAV------------------------------
+.nav {
+  @media screen and (max-width: 959px) {
+    display: none;
+  }
+  display: flex;
+  height: 56px;
+  margin: 8px auto 0;
+  max-width: 960px;
+  width: 100%;
+  > ul {
+    background: $white;
     display: flex;
-    height: 56px;
-    margin: 8px auto 0;
-    max-width: 960px;
+    justify-content: space-around;
+    list-style: none;
     width: 100%;
-    > ul {
-      background: $white;
+    > li {
+      background: linear-gradient($white 0, $white 25%, #eee 100%);
+      box-shadow: 0 1px 1px 0px #e0e0e0;
+      cursor: pointer;
       display: flex;
-      justify-content: space-around;
-      list-style: none;
-      width: 100%;
-      > li {
-        background: linear-gradient($white 0, $white 25%, #eee 100%);
-        box-shadow: 0 1px 1px 0px #e0e0e0;
-        cursor: pointer;
+      flex: 0 1 156px;
+      flex-direction: column;
+      font-size: 1.4rem;
+      justify-content: flex-start;
+      padding-top: 10px;
+      text-align: center;
+      &:hover {
+        background: linear-gradient(#eee 0, #eee 25%, $white 100%);
+      }
+      &:hover > ul {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.2s ease-in-out;
+      }
+      > ul {
         display: flex;
-        flex: 0 1 156px;
         flex-direction: column;
-        font-size: 1.4rem;
         justify-content: flex-start;
-        padding-top: 10px;
-        text-align: center;
-        &:hover {
-          background: linear-gradient(#eee 0, #eee 25%, $white 100%);
-        }
-        &:hover > ul {
-          opacity: 1;
-          visibility: visible;
-          transition: 0.2s ease-in-out;
-        }
-        > ul {
+        margin-top: 14px;
+        z-index: 1;
+        opacity: 0;
+        transition: 0.3s ease-in;
+        visibility: hidden;
+        > li {
+          background: $white;
+          border-bottom: $border;
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
-          margin-top: 14px;
-          z-index: 1;
-          opacity: 0;
-          transition: 0.3s ease-in;
-          visibility: hidden;
-          > li {
-            background: $white;
-            border-bottom: $border;
-            display: flex;
-            flex-direction: column;
-            height: 36px;
-            justify-content: center;
-            &:hover {
-              background: lighten($key-color, 15%);
-              a {
-                color: $white;
-              }
-            }
+          height: 36px;
+          justify-content: center;
+          &:hover {
+            background: lighten($key-color, 15%);
             a {
-              color: $black;
-              font-size: 1.2rem;
-              text-decoration: none;
+              color: $white;
             }
+          }
+          a {
+            color: $black;
+            font-size: 1.2rem;
+            text-decoration: none;
           }
         }
       }
@@ -233,6 +269,9 @@ body {
 
 //MAIN------------------------------
 .main-wrapper {
+  @media screen and (max-width: 959px) {
+    top: 0;
+  }
   max-width: 960px;
   overflow-x: hidden;
   position: relative;
@@ -247,11 +286,12 @@ body {
   border: $border;
   cursor: pointer;
   display: block;
-  height: 304px;
-  line-height: 240px;
-  width: 100%;
+  // height: 304px;
+  // line-height: 240px;
+  // width: 100%;
   img {
     transition: 1.5s;
+    width: 100%;
   }
   img:hover {
     opacity: 0.8;
@@ -263,7 +303,7 @@ body {
 
 // MAIN CONTAINER------------------------------
 .main-container {
-  margin-top: 24px;
+  margin-top: 1.6rem;
   width: 100%;
 }
 
@@ -271,7 +311,7 @@ body {
   display: flex;
   justify-content: space-between;
   // NEWS------------------------------
-  .main__info {
+  .main__news {
     flex: 0 1 635px;
     height: 498px;
     &-header {
@@ -317,7 +357,7 @@ body {
     }
   }
   // RIGHT COLUMN------------------------------
-  .main__right-column {
+  .main__info {
     display: flex;
     flex: 0 1 310px;
     flex-direction: column;
@@ -331,7 +371,7 @@ body {
         border-right: $border;
         flex: 0 1 188px;
       }
-      h3 {
+      h2 {
         border-bottom: $border;
         color: $key-color;
         cursor: pointer;
@@ -436,6 +476,9 @@ body {
 
 // SECOND-NAV------------------------------
 .second-nav {
+  @media screen and (max-width: 959px) {
+    margin-top: 0;
+  }
   height: 40px;
   margin-top: -218px;
   &__nav-area {
@@ -470,7 +513,7 @@ body {
   &__banner-area {
     margin-top: 16px;
     padding-top: 16px;
-    h3 {
+    h2 {
       position: relative;
       font-size: 1.3rem;
       font-weight: normal;
