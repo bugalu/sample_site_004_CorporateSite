@@ -207,6 +207,7 @@ body {
     width: 8rem;
   }
   .head-container .header__menus-tablet i {
+    cursor: pointer;
     font-size: 3.2rem;
     margin-left: 1.6rem;
   }
@@ -435,6 +436,12 @@ body {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 959px) {
+  .main__upper-container {
+    display: block;
+  }
+}
+
 .main__upper-container .main__news {
   -ms-flex: 0 1 635px;
   -webkit-box-flex: 0;
@@ -533,7 +540,7 @@ body {
   flex: 0 1 188px;
 }
 
-.main__upper-container .main__info__message h2 {
+.main__upper-container .main__info__message-heading-ja, .main__upper-container .main__info__message-heading-en {
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
   border-bottom: solid 1px #d9d9d9;
@@ -546,21 +553,21 @@ body {
   font-weight: normal;
   height: 24px;
   justify-content: space-between;
-  line-height: 24px;
+  line-height: 2.4rem;
   padding: 0 12px;
 }
 
-.main__upper-container .main__info__message h2:hover {
-  background: #f5f5f5;
+.main__upper-container .main__info__message-heading-ja:hover, .main__upper-container .main__info__message-heading-en:hover {
+  background: #f3f3f3;
 }
 
-.main__upper-container .main__info__message h2::after {
+.main__upper-container .main__info__message-heading-ja::after, .main__upper-container .main__info__message-heading-en::after {
   content: "\f0da";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
-.main__upper-container .main__info__message-heading {
+.main__upper-container .main__info__message-lead {
   font-size: 1.2rem;
   height: 70px;
   padding: 3px 12px 0px;
@@ -592,6 +599,13 @@ body {
 
 .main__upper-container .main__info__ir-header {
   height: 40px;
+}
+
+@media screen and (max-width: 959px) {
+  .main__upper-container .main__info__ir-header .ruby,
+  .main__upper-container .main__info__ir-header .l-section-header-link {
+    display: none;
+  }
 }
 
 .main__upper-container .main__info__ir-body-upper {
@@ -652,6 +666,10 @@ body {
   display: flex;
   height: 68px;
   width: 300px;
+}
+
+.main__upper-container .main__info__recruit-heading {
+  display: none;
 }
 
 .main__lower-container {
