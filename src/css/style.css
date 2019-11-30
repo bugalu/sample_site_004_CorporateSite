@@ -469,24 +469,26 @@ body {
 }
 
 .main__upper-container .main__news-body time {
-  -ms-flex: 1 1 82px;
+  -ms-flex: 0 1 auto;
   -ms-flex-item-align: center;
-  -webkit-box-flex: 1;
+  -webkit-box-flex: 0;
   align-self: center;
-  flex: 1 1 82px;
+  flex: 0 1 auto;
+  min-width: 80px;
 }
 
 .main__upper-container .main__news-body-tag {
-  -ms-flex: 1 1 72px;
+  -ms-flex: 1 1 auto;
   -ms-flex-item-align: center;
   -webkit-box-flex: 1;
   align-self: center;
   border-radius: 4px;
   color: #fafafa;
-  flex: 1 1 72px;
+  flex: 1 1 auto;
   height: 20px;
   line-height: 20px;
   margin-left: 8px;
+  min-width: 72px;
   text-align: center;
 }
 
@@ -503,9 +505,9 @@ body {
 }
 
 .main__upper-container .main__news-body p {
-  -ms-flex: 1 1 454px;
-  -webkit-box-flex: 1;
-  flex: 1 1 454px;
+  -ms-flex: 5 3 454px;
+  -webkit-box-flex: 5;
+  flex: 5 3 454px;
   margin-left: 16px;
 }
 

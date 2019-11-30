@@ -6,21 +6,33 @@ $tag-color-blue: hsl(200, 70%, 60%);
 $tag-color-green: hsl(120, 70%, 50%);
 $tag-color-pink: hsl(335, 70%, 70%);
 $border: solid 1px hsl(0, 0%, 85%);
-$bg-stripe: repeating-linear-gradient(-45deg, $white 0px, $white 3px, #eee 3px, #eee 4px);
+$bg-stripe: repeating-linear-gradient(
+  -45deg,
+  $white 0px,
+  $white 3px,
+  #eee 3px,
+  #eee 4px
+);
 html {
   font-size: 62.5%;
 }
 body {
   background: $bg-stripe;
   color: $black;
-  font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue", "Hiragino Sans", "ヒラギノ角ゴ ProN W3",
-    Arial, メイリオ, Meiryo, sans-serif;
+  font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue",
+    "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
 }
 
 //COMMON------------------------------
 
 .l-background-pattern {
-  background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, $white 3px, $white 4px),
+  background: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 3px,
+      $white 3px,
+      $white 4px
+    ),
     repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, $white 3px, $white 4px);
   height: 232px;
   @media screen and (max-width: 959px) {
@@ -95,7 +107,13 @@ body {
   display: flex;
   flex-direction: column;
   .header {
-    background: repeating-linear-gradient(90deg, transparent 0px, transparent 9px, #eee 9px, #eee 10px),
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 9px,
+        #eee 9px,
+        #eee 10px
+      ),
       repeating-linear-gradient(#e6e6e6 0px, #dfdfdf 9px, #eee 9px, #eee 10px);
     display: flex;
     height: 64px;
@@ -336,16 +354,18 @@ body {
       }
       time {
         align-self: center;
-        flex: 1 1 82px;
+        flex: 0 1 auto;
+        min-width: 80px;
       }
       &-tag {
         align-self: center;
         border-radius: 4px;
         color: $white;
-        flex: 1 1 72px;
+        flex: 1 1 auto;
         height: 20px;
         line-height: 20px;
         margin-left: 8px;
+        min-width:72px;
         text-align: center;
         &.c-blue {
           background-color: $tag-color-blue;
@@ -358,7 +378,7 @@ body {
         }
       }
       p {
-        flex: 1 1 454px;
+        flex: 5 3 454px;
         margin-left: 16px;
       }
     }
@@ -370,22 +390,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin-left: 12px;
-    // &-button {
-    //   @media screen and (max-width: 959px) {
-    //     background: #aaa;
-    //     border: none;
-    //     color: #ff00ff;
-    //     height: 3.2rem;
-    //   }
-    // }
     // MESSAGE------------------------------
     &__message {
       display: flex;
       height: 120px;
-      // @media screen and (max-width: 959px) {
-      //   flex: 0 1 310px;
-      //   height: 100%;
-      // }
       &-head-container {
         border-right: $border;
         flex: 0 1 188px;
