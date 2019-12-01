@@ -397,7 +397,6 @@ body {
 
 @media screen and (max-width: 959px) {
   .main-wrapper {
-    height: 100%;
     overflow: visible;
     top: 0;
   }
@@ -809,13 +808,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 348px;
   justify-content: space-between;
   margin-top: 16px;
 }
 
 .main__lower-container section {
-  height: 324px;
   width: 310px;
 }
 
@@ -827,6 +824,10 @@ body {
   background: #ddd;
   height: 128px;
   width: 308px;
+}
+
+.main__lower-container__section-body {
+  padding-bottom: 4px;
 }
 
 @media screen and (max-width: 959px) {
@@ -864,19 +865,25 @@ body {
   }
   .main__lower-container__section-body__index li {
     border-bottom: 1px solid #fafafa;
+    cursor: pointer;
     display: block;
+    height: 4rem;
     text-align: center;
+  }
+  .main__lower-container__section-body__index li:hover {
+    background: #d0d0d0;
   }
   .main__lower-container__section-body__index li a {
     color: #333;
-    line-height: 2.8rem;
+    font-size: 1.6rem;
+    line-height: 4rem;
     text-decoration: none;
   }
 }
 
 .second-nav {
   height: 40px;
-  margin-top: -218px;
+  margin-top: -202px;
 }
 
 .second-nav__nav-area {
@@ -919,8 +926,8 @@ body {
 
 @media screen and (max-width: 959px) {
   .guide__wrapper {
+    padding: 0 16px;
     position: relative;
-    top: 218px;
   }
 }
 
@@ -952,11 +959,14 @@ body {
 }
 
 .guide__banner-deck {
+  -ms-flex-pack: center;
   -ms-flex-wrap: wrap;
+  -webkit-box-pack: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 6px;
 }
 
@@ -965,8 +975,13 @@ body {
   margin: 12px 12px 8px 0;
 }
 
-.guide__banner:nth-of-type(6n) {
-  margin-right: 0;
+@media screen and (min-width: 960px) {
+  .guide__banner:nth-of-type(6n) {
+    margin-right: 0;
+  }
+  .guide__banner:last-child {
+    margin-right: 0;
+  }
 }
 
 .guide__banner:hover {
@@ -1046,11 +1061,4 @@ footer {
   font-size: 1.2rem;
   height: 6rem;
   justify-content: center;
-}
-
-@media screen and (max-width: 959px) {
-  footer {
-    position: relative;
-    top: 96px;
-  }
 }

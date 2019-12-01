@@ -296,7 +296,7 @@ body {
   right: 0;
   margin: auto;
   @media screen and (max-width: 959px) {
-    height: 100%;
+    // height: 100%;
     overflow: visible;
     top: 0;
   }
@@ -581,11 +581,10 @@ body {
 // MAIN-LOWER-CONTAINER------------------------------
 .main__lower-container {
   display: flex;
-  height: 348px;
+  // height: 348px;
   justify-content: space-between;
   margin-top: 16px;
   & section {
-    height: 324px;
     width: 310px;
     & .l-section-header {
       height: 40px;
@@ -595,6 +594,9 @@ body {
     background: #ddd;
     height: 128px;
     width: 308px;
+  }
+  &__section-body {
+    padding-bottom: 4px;
   }
   // MAIN-LOWER-CONTAINER @tablet------------------------------
   @media screen and (max-width: 959px) {
@@ -624,11 +626,18 @@ body {
       width: 50%;
       li {
         border-bottom: 1px solid #fafafa;
+        cursor: pointer;
         display: block;
+        height: 4rem;
         text-align: center;
+        &:hover {
+          background: #d0d0d0;
+          // opacity: 0.1;
+        }
         a {
           color: #333;
-          line-height: 2.8rem;
+          font-size: 1.6rem;
+          line-height: 4rem;
           text-decoration: none;
         }
       }
@@ -639,7 +648,7 @@ body {
 // SECOND-NAV------------------------------
 .second-nav {
   height: 40px;
-  margin-top: -218px;
+  margin-top: -202px;
   &__nav-area {
     max-width: 960px;
     margin: 0 auto;
@@ -669,8 +678,8 @@ body {
     margin-top: -16px;
     width: 100%;
     @media screen and (max-width: 959px) {
+      padding: 0 16px;
       position: relative;
-      top: 218px;
     }
   }
   &__container {
@@ -699,13 +708,19 @@ body {
   &__banner-deck {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 6px;
   }
   &__banner {
     cursor: pointer;
     margin: 12px 12px 8px 0;
-    &:nth-of-type(6n) {
-      margin-right: 0;
+    @media screen and (min-width: 960px) {
+      &:nth-of-type(6n) {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
     }
     &:hover {
       opacity: 0.7;
@@ -766,8 +781,4 @@ footer {
   font-size: 1.2rem;
   height: 6rem;
   justify-content: center;
-  @media screen and (max-width: 959px) {
-    position: relative;
-    top: 96px;
-  }
 }
