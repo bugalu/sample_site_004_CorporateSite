@@ -914,7 +914,6 @@ body {
 @media screen and (max-width: 959px) {
   .second-nav {
     display: none;
-    margin-top: 0;
   }
 }
 
@@ -926,7 +925,6 @@ body {
 
 @media screen and (max-width: 959px) {
   .guide__wrapper {
-    padding: 0 16px;
     position: relative;
   }
 }
@@ -958,6 +956,12 @@ body {
   top: 50%;
 }
 
+@media screen and (max-width: 959px) {
+  .guide__banner-area h2 {
+    display: none;
+  }
+}
+
 .guide__banner-deck {
   -ms-flex-pack: center;
   -ms-flex-wrap: wrap;
@@ -972,16 +976,7 @@ body {
 
 .guide__banner {
   cursor: pointer;
-  margin: 12px 12px 8px 0;
-}
-
-@media screen and (min-width: 960px) {
-  .guide__banner:nth-of-type(6n) {
-    margin-right: 0;
-  }
-  .guide__banner:last-child {
-    margin-right: 0;
-  }
+  margin: 8px;
 }
 
 .guide__banner:hover {
@@ -997,6 +992,40 @@ body {
   justify-content: space-between;
   margin-top: 24px;
   padding-bottom: 16px;
+}
+
+@media screen and (max-width: 959px) {
+  .guide__index-container section {
+    display: none;
+  }
+  .guide__index-container div.guide__index {
+    width: 100%;
+  }
+  .guide__index-container div.guide__index ul {
+    -ms-flex-direction: column;
+    -ms-flex-wrap: wrap;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    background: #dddddd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 20rem;
+  }
+  .guide__index-container div.guide__index ul li {
+    border: solid 1px #d9d9d9;
+    height: 4rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  .guide__index-container div.guide__index ul li a {
+    color: #333;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    text-decoration: none;
+  }
 }
 
 .guide__index-heading {
