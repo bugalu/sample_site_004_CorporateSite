@@ -296,6 +296,8 @@ body {
   right: 0;
   margin: auto;
   @media screen and (max-width: 959px) {
+    height: 100%;
+    overflow: visible;
     top: 0;
   }
 }
@@ -336,6 +338,9 @@ body {
   .main__news {
     flex: 0 1 635px;
     height: 498px;
+    @media screen and (max-width: 959px) {
+      height: 100%;
+    }
     &-header {
       height: 44px;
     }
@@ -343,9 +348,9 @@ body {
       height: 452px;
       overflow-y: scroll;
       padding: 15px;
-      // @media screen and (max-width: 959px) {
-      //   height: 100%;
-      // }
+      @media screen and (max-width: 959px) {
+        height: 100%;
+      }
       li {
         border-bottom: 1px dashed #ccc;
         display: flex;
@@ -420,7 +425,7 @@ body {
         line-height: 2.4rem;
         padding: 0 12px;
         &:hover {
-          background: #f3f3f3;
+          background: #f0f0f0;
         }
         &::after {
           content: "\f0da";
@@ -447,6 +452,7 @@ body {
       }
       //MESSAGE BLOCK @tablet------------------------------
       @media screen and (max-width: 959px) {
+        cursor: pointer;
         height: 100px;
         flex: 4 4 auto;
         margin: 1.6rem 1.6rem 0 0;
@@ -462,6 +468,12 @@ body {
         }
         img {
           height: 100px;
+        }
+        &:hover {
+          background: #f0f0f0;
+          img {
+            opacity: 0.8;
+          }
         }
       }
     }
@@ -529,7 +541,7 @@ body {
                 background: #f0f0f0;
               }
               & p:before {
-                color:$key-color;
+                color: $key-color;
                 content: "\f0da";
                 font-family: "Font Awesome 5 Free";
                 font-weight: 900;
@@ -558,6 +570,7 @@ body {
       &-heading {
         display: none;
       }
+      // RECRUIT @tablet------------------------------
       @media screen and (max-width: 959px) {
         margin: 1.6rem 1.6rem 0 0;
       }
@@ -583,8 +596,43 @@ body {
     height: 128px;
     width: 308px;
   }
+  // MAIN-LOWER-CONTAINER @tablet------------------------------
   @media screen and (max-width: 959px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    img {
+      display: none;
+    }
+    .l-section-base {
+      width: 100%;
+      &:not(:last-of-type) {
+        border-bottom: none;
+      }
+    }
+    .l-section-header {
+      border-top-width: 1px;
+      h2 {
+        margin: 0 auto;
+        font-size: 1.8rem;
+        .ruby {
+          display: none;
+        }
+      }
+    }
+    &__section-body__index {
+      background: #ddd;
+      width: 50%;
+      li {
+        border-bottom: 1px solid #fafafa;
+        display: block;
+        text-align: center;
+        a {
+          color: #333;
+          line-height: 2.8rem;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 
@@ -620,6 +668,10 @@ body {
     background: $white;
     margin-top: -16px;
     width: 100%;
+    @media screen and (max-width: 959px) {
+      position: relative;
+      top: 218px;
+    }
   }
   &__container {
     margin: auto;
@@ -714,4 +766,8 @@ footer {
   font-size: 1.2rem;
   height: 6rem;
   justify-content: center;
+  @media screen and (max-width: 959px) {
+    position: relative;
+    top: 96px;
+  }
 }
