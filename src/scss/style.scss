@@ -145,6 +145,14 @@ body {
         letter-spacing: -2px;
         vertical-align: text-bottom;
       }
+      @media screen and (max-width: 559px) {
+        font-size: 1.8rem;
+        span {
+          display: inline-block;
+          font-size: 1.3rem;
+          vertical-align: text-top;
+        }
+      }
     }
     &__menus {
       @media screen and (max-width: 959px) {
@@ -397,12 +405,29 @@ body {
       padding: 15px;
       @media screen and (max-width: 959px) {
         height: 100%;
+        padding-top: 0;
       }
       li {
         border-bottom: 1px dashed #ccc;
         display: flex;
         font-size: 1.4rem;
         padding: 8px;
+        @media screen and (max-width: 559px) {
+          flex-direction: column;
+          time {
+            align-self: center;
+            flex: 0 1 1.8rem;
+          }
+          div {
+            align-self: auto;
+            flex: 0 1 1.8rem;
+            margin-left: 0;
+          }
+          p {
+            flex: 0 1 0;
+            margin: 1rem 0 0;
+          }
+        }
       }
       time {
         align-self: center;
@@ -520,6 +545,28 @@ body {
           background: #f0f0f0;
           img {
             opacity: 0.8;
+          }
+        }
+      }
+      //MESSAGE BLOCK @smartPhone------------------------------
+      @media screen and (max-width: 559px) {
+        height: 6rem;
+        min-width: 320px;
+        &-head-container h2 {
+          font-size: 2.4rem;
+        }
+        img,
+        &-heading-en,
+        &-lead {
+          display: none;
+        }
+        &-heading-ja {
+          border: none;
+          height: 100%;
+          justify-content: center;
+          line-height: 6rem;
+          &:after {
+            margin-left: 8px;
           }
         }
       }
@@ -703,6 +750,15 @@ body {
       }
     }
   }
+  // MAIN-LOWER-CONTAINER @smartphone
+  @media screen and (max-width: 559px) {
+    &__section-body {
+      flex-direction: column;
+      & ul {
+        min-width: 100%;
+      }
+    }
+  }
 }
 
 // SECOND-NAV------------------------------
@@ -794,6 +850,7 @@ body {
     justify-content: space-between;
     margin-top: 24px;
     padding-bottom: 16px;
+    // guide__index-container @tablet
     @media screen and (max-width: 959px) {
       padding-bottom: 0;
       section {
@@ -826,6 +883,19 @@ body {
               line-height: 4rem;
               text-decoration: none;
             }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 559px) {
+      // height: 32rem;
+      div.guide__index ul {
+        flex-wrap: nowrap;
+        height: 32rem;
+        & li {
+          width: 100%;
+          &:nth-of-type(-n + 4) {
+            border-right: none;
           }
         }
       }
