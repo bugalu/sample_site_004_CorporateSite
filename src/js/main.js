@@ -25,4 +25,17 @@
       }, 1500);
     }, 7000);
   }
+
+  // drawer-menu
+  const nav = document.getElementById("nav");
+  const bar = document.getElementById("bar");
+  const close = document.getElementById("close");
+
+  bar.addEventListener("click", () => {
+    nav.classList.add("isVisible");
+  });
+
+  close.addEventListener("click", () => {
+    nav.classList.remove("isVisible");
+  });
 }

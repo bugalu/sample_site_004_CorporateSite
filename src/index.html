@@ -13,7 +13,7 @@
     />
     <!-- リセットCSS ↓ -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="./css/style.css?20191118" />
+    <link rel="stylesheet" href="./css/style.css?20191202" />
   </head>
 
   <body>
@@ -61,15 +61,15 @@
           <div class="header__menus__site-menu-tb">
             <button>English</button>
           </div>
-          <i class="fas fa-bars"></i>
+          <i class="fas fa-bars" id="bar"></i>
         </div>
         <!-- header__menus-tab end -->
       </header>
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <ul>
-          <li>
+          <li class="nav__menu">
             企業情報<span class="ruby">Company Profile</span>
-            <ul>
+            <ul class="nav__submenu">
               <li><a href="">社長メッセージ</a></li>
               <li><a href="">グループミッション</a></li>
               <li><a href="">会社概要</a></li>
@@ -78,9 +78,9 @@
               <li><a href="">コーポレートガバナンス</a></li>
             </ul>
           </li>
-          <li>
+          <li class="nav__menu">
             IR情報<span class="ruby">Investor Relations</span>
-            <ul>
+            <ul class="nav__submenu">
               <li><a href="">決算短信</a></li>
               <li><a href="">決算説明会</a></li>
               <li><a href="">財務ハイライト</a></li>
@@ -91,22 +91,22 @@
               <li><a href="">財務諸表</a></li>
             </ul>
           </li>
-          <li>ニュースリリース<span class="ruby">News Release</span></li>
-          <li>株価情報<span class="ruby">Stock Quotations</span></li>
-          <li>
+          <li class="nav__menu">ニュースリリース<span class="ruby">News Release</span></li>
+          <li class="nav__menu">株価情報<span class="ruby">Stock Quotations</span></li>
+          <li class="nav__menu">
             株主・投資家の皆様へ<span class="ruby"
               >For Sharefolders and Investors</span
             >
-            <ul>
+            <ul class="nav__submenu">
               <li><a href="">株価情報</a></li>
               <li><a href="">株主総会</a></li>
               <li><a href="">株主優待・配当金</a></li>
               <li><a href="">IRカレンダー</a></li>
             </ul>
           </li>
-          <li>
+          <li class="nav__menu">
             ESG活動<span class="ruby">Environment Society Governance</span>
-            <ul>
+            <ul class="nav__submenu">
               <li><a href="">環境保護活動</a></li>
               <li><a href="">社会貢献活動</a></li>
               <li><a href="">募金活動</a></li>
@@ -118,6 +118,7 @@
             </ul>
           </li>
         </ul>
+        <i class="fas fa-times-circle fa-4x nav__close" id="close"></i>
       </nav>
     </div>
     <!-- head-conatiner end -->
