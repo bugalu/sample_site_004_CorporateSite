@@ -110,6 +110,12 @@ body {
   font-weight: 900;
 }
 
+@media screen and (max-width: 959px) {
+  .l-body-lower-index li:before {
+    content: "";
+  }
+}
+
 .head-container {
   -ms-flex-direction: column;
   -webkit-box-direction: normal;
@@ -863,6 +869,9 @@ body {
     background: #ddd;
     width: 50%;
   }
+  .main__lower-container__section-body__index:first-child {
+    border-right: 1px solid #fafafa;
+  }
   .main__lower-container__section-body__index li {
     border-bottom: 1px solid #fafafa;
     cursor: pointer;
@@ -878,6 +887,15 @@ body {
     font-size: 1.6rem;
     line-height: 4rem;
     text-decoration: none;
+  }
+  .main__lower-container__section-body__index li a:before {
+    color: #ff8800;
+    content: "\f152";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-right: 6px;
+    vertical-align: 2px;
   }
 }
 
@@ -995,6 +1013,9 @@ body {
 }
 
 @media screen and (max-width: 959px) {
+  .guide__index-container {
+    padding-bottom: 0;
+  }
   .guide__index-container section {
     display: none;
   }
@@ -1012,13 +1033,21 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 20rem;
+    height: 16rem;
   }
   .guide__index-container div.guide__index ul li {
-    border: solid 1px #d9d9d9;
+    border-bottom: 1px solid #fafafa;
+    cursor: pointer;
     height: 4rem;
     margin-left: 0;
     text-align: center;
+    width: 50%;
+  }
+  .guide__index-container div.guide__index ul li:nth-of-type(-n + 4) {
+    border-right: 1px solid #fafafa;
+  }
+  .guide__index-container div.guide__index ul li:hover {
+    background: #d0d0d0;
   }
   .guide__index-container div.guide__index ul li a {
     color: #333;

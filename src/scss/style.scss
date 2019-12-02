@@ -96,6 +96,9 @@ body {
         content: "\f0da";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
+        @media screen and (max-width: 959px) {
+          content: "";
+        }
       }
     }
   }
@@ -540,6 +543,7 @@ body {
               &:hover {
                 background: #f0f0f0;
               }
+              // 会社案内・年次報告
               & p:before {
                 color: $key-color;
                 content: "\f0da";
@@ -624,6 +628,9 @@ body {
     &__section-body__index {
       background: #ddd;
       width: 50%;
+      &:first-child {
+        border-right: 1px solid #fafafa;
+      }
       li {
         border-bottom: 1px solid #fafafa;
         cursor: pointer;
@@ -639,6 +646,15 @@ body {
           font-size: 1.6rem;
           line-height: 4rem;
           text-decoration: none;
+          &:before {
+            color: $key-color;
+            content: "\f152";
+            font-family: "Font Awesome 5 Free";
+            font-size: 1.2rem;
+            font-weight: 900; //or 900
+            margin-right: 6px;
+            vertical-align: 2px;
+          }
         }
       }
     }
@@ -735,6 +751,7 @@ body {
     margin-top: 24px;
     padding-bottom: 16px;
     @media screen and (max-width: 959px) {
+      padding-bottom: 0;
       section {
         display: none;
       }
@@ -745,12 +762,20 @@ body {
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          height: 20rem;
+          height: 16rem;
           li {
-            border: $border;
+            border-bottom: 1px solid #fafafa;
+            cursor: pointer;
             height: 4rem;
             margin-left: 0;
             text-align: center;
+            width: 50%;
+            &:nth-of-type(-n + 4) {
+              border-right: 1px solid #fafafa;
+            }
+            &:hover {
+              background: #d0d0d0;
+            }
             a {
               color: $black;
               font-size: 1.6rem;
