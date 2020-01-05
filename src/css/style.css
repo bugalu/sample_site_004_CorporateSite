@@ -480,8 +480,8 @@ body {
 }
 
 .main__top-images img {
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
   width: 100%;
 }
 

@@ -25,7 +25,6 @@
       }, 1500);
     }, 7000);
   }
-
   // drawer-menu
   const nav = document.getElementById("nav");
   const bar = document.getElementById("bar");
