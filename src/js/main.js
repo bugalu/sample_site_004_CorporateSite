@@ -9,6 +9,7 @@
     "./img/top-image4.jpg"
   );
   let count = -1;
+  slide.style.opacity = 0;
   slideShow();
 
   function slideShow() {
@@ -17,13 +18,15 @@
       count = 0;
     }
     slide.src = img[count];
-    slide.style.opacity = 1;
+    setTimeout(() => {
+      slide.style.opacity = 1;
+    }, 300);
     setTimeout(() => {
       slide.style.opacity = 0;
-      setTimeout(() => {
-        slideShow();
-      }, 1500);
-    }, 7000);
+    }, 9200);
+    setTimeout(() => {
+      slideShow();
+    }, 10000);
   }
   // drawer-menu
   const nav = document.getElementById("nav");
