@@ -145,25 +145,19 @@ body {
   width: 100%;
 }
 
-.head-container .header__door-plate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .head-container .header__logo {
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.head-container .header__logo img {
+  display: inline-block;
   height: 40px;
 }
 
 .head-container .header__company-name {
   -ms-flex-item-align: center;
   align-self: center;
-  color: #ff8800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: YuMincho;
   font-size: 2.1rem;
   margin-left: 6px;
@@ -173,6 +167,21 @@ body {
   font-size: 1.6rem;
   letter-spacing: -2px;
   vertical-align: text-bottom;
+}
+
+.head-container .header__company-name a {
+  color: #ff8800;
+  text-decoration: none;
+}
+
+.head-container .header__company-name a:before {
+  background-image: url(../img/or-logo-orange.png);
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  height: 40px;
+  vertical-align: middle;
+  width: 40px;
 }
 
 @media screen and (max-width: 559px) {
@@ -1066,6 +1075,10 @@ body {
   }
 }
 
+.guide {
+  margin-top: 6px;
+}
+
 .guide__wrapper {
   background: #fafafa;
   margin-top: -16px;
@@ -1217,7 +1230,6 @@ body {
 
 .guide__index-body {
   list-style: none;
-  margin-top: 6px;
 }
 
 .guide__index-body li {
@@ -1261,7 +1273,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.2rem;
   height: 6rem;
   justify-content: center;
 }
