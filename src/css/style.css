@@ -175,7 +175,7 @@ body {
 }
 
 .head-container .header__company-name a:before {
-  background-image: url(../img/or-logo-orange.png);
+  background-image: url(../img/or-logo-green.png);
   background-size: contain;
   content: "";
   display: inline-block;
