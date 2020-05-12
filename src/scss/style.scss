@@ -291,11 +291,12 @@ body {
     display: none;
   }
   @media screen and (max-width: 959px) {
+    height: auto;
     box-shadow: 5px 5px 5px 0px #333;
     opacity: 0.9;
     position: fixed;
     transition: 0.5s;
-    top: -3.375em; 
+    // top: -3.375em; 
     z-index: 1;
     &.isVisible {
       top: -8px;
@@ -856,9 +857,9 @@ body {
         ul {
           background: #dddddd;
           display: flex;
-          flex-direction: column;
+          // flex-direction: column;
           flex-wrap: wrap;
-          height: 1em;
+          // height: 1em;
           li {
             border-bottom: 1px solid #fafafa;
             cursor: pointer;
@@ -885,10 +886,10 @@ body {
     @media screen and (max-width: 559px) {
       // height: 32rem;
       div.guide__index ul {
-        flex-wrap: nowrap;
-        height: 2em;
+        flex-wrap: wrap;
+        // height: 2em;
         & li {
-          width: 100%;
+          width: 50%;
           &:nth-of-type(-n + 4) {
             border-right: none;
           }

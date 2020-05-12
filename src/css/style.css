@@ -406,13 +406,13 @@ body {
 
 @media screen and (max-width: 959px) {
   .nav {
+    height: auto;
     -webkit-box-shadow: 5px 5px 5px 0px #333;
             box-shadow: 5px 5px 5px 0px #333;
     opacity: 0.9;
     position: fixed;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    top: -3.375em;
     z-index: 1;
   }
   .nav.isVisible {
@@ -1170,13 +1170,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    height: 1em;
   }
   .guide__index-container div.guide__index ul li {
     border-bottom: 1px solid #fafafa;
@@ -1202,12 +1197,11 @@ body {
 
 @media screen and (max-width: 559px) {
   .guide__index-container div.guide__index ul {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    height: 2em;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .guide__index-container div.guide__index ul li {
-    width: 100%;
+    width: 50%;
   }
   .guide__index-container div.guide__index ul li:nth-of-type(-n + 4) {
     border-right: none;
