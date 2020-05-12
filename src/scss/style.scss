@@ -1,4 +1,8 @@
-//FOUNDATION
+/* ======================================================
+   Foundation
+   ====================================================== */
+/* Default Style
+   ------------------------------------------------------ */
 $key-color: hsl(96, 45%, 45%);
 $black: #333;
 $white: #fafafa;
@@ -7,9 +11,9 @@ $tag-color-green: hsl(96, 70%, 45%);
 $tag-color-pink: hsl(335, 70%, 70%);
 $border: solid 1px hsl(0, 0%, 85%);
 $bg-stripe: repeating-linear-gradient(-45deg, $white 0px, $white 3px, #eee 3px, #eee 4px);
-html {
-  font-size: 62.5%;
-}
+// html {
+//   font-size: 62.5%;
+// }
 body {
   background: $bg-stripe;
   color: $black;
@@ -39,7 +43,7 @@ body {
   justify-content: space-between;
   padding: 0 12px;
   h2 {
-    font-size: 1.4rem;
+    font-size: 0.875em;
     font-weight: normal;
     .ruby {
       margin-left: 6px;
@@ -47,7 +51,7 @@ body {
   }
   &-link {
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 0.687em;
     &::before {
       color: $key-color;
       content: "\f152";
@@ -59,7 +63,7 @@ body {
 }
 .ruby {
   color: #bbb;
-  font-size: 1rem;
+  font-size: 0.625em;
 }
 .l-body-lower {
   // align-items: center;
@@ -67,7 +71,7 @@ body {
   justify-content: space-around;
   margin-top: 4px;
   &-index {
-    font-size: 1.3rem;
+    font-size: 0.8125em;
     list-style: none;
     li {
       align-items: center;
@@ -116,10 +120,10 @@ body {
       display: flex;
       align-self: center;
       font-family: YuMincho;
-      font-size: 2.1rem;
+      font-size: 1.3125em;
       margin-left: 6px;
       span {
-        font-size: 1.6rem;
+        font-size: 0.7619em;
         letter-spacing: -2px;
         vertical-align: text-bottom;
       }
@@ -137,10 +141,10 @@ body {
         }
       }
       @media screen and (max-width: 559px) {
-        font-size: 1.8rem;
+        font-size: 1.125em;
         span {
           display: inline-block;
-          font-size: 1.3rem;
+          font-size: 1.38462em; 
           vertical-align: text-top;
         }
       }
@@ -157,26 +161,26 @@ body {
         align-self: center;
         color: $key-color;
         display: flex;
-        margin-right: 1.2rem;
+        margin-right: 0.75em;
         button {
           background: #fafafa;
           border: 2px solid $key-color;
           border-radius: 4px;
-          font-size: 1.2rem;
-          height: 2.2rem;
-          width: 8rem;
+          font-size: 0.75em;
+          height: 1.375em;
+          width: 5em;
         }
         i {
           cursor: pointer;
-          font-size: 3.2rem;
-          margin-left: 1.6rem;
+          font-size: 2em;
+          margin-left: 1em;
         }
       }
       display: none;
     }
     &__site-menu {
       display: flex;
-      font-size: 1.2rem;
+      font-size: 0.75em;
       height: 16px;
       justify-content: flex-end;
       list-style: none;
@@ -199,7 +203,7 @@ body {
       background-color: $key-color;
       border-radius: 0 0 6px 6px;
       color: $white;
-      font-size: 1.2rem;
+      font-size: 0.75em;
       height: 32px;
       margin-left: 16px;
       text-align: center;
@@ -240,7 +244,7 @@ body {
       display: flex;
       flex: 0 1 156px;
       flex-direction: column;
-      font-size: 1.4rem;
+      font-size: 0.875em;
       justify-content: flex-start;
       padding-top: 10px;
       text-align: center;
@@ -276,7 +280,7 @@ body {
           }
           a {
             color: $black;
-            font-size: 1.2rem;
+            font-size: 0.75em;
             text-decoration: none;
           }
         }
@@ -291,7 +295,7 @@ body {
     opacity: 0.9;
     position: fixed;
     transition: 0.5s;
-    top: -54rem;
+    top: -3.375em; 
     z-index: 1;
     &.isVisible {
       top: -8px;
@@ -299,13 +303,13 @@ body {
     & > ul {
       display: flex;
       flex-direction: column;
-      height: 30rem;
+      height: 18.75em; 
       & > li.nav__menu {
         background: #ddd;
         cursor: pointer;
-        font-size: 1.8rem;
-        height: 5rem;
-        line-height: 5rem;
+        font-size: 1.125em;
+        height: 4.44444em;
+        line-height: 4.44444em;
         padding-top: 0;
         &:hover {
           background: #f0f0f0;
@@ -370,7 +374,7 @@ body {
 
 // MAIN CONTAINER------------------------------
 .main-container {
-  margin-top: 1.6rem;
+  margin-top: 1em;
   width: 100%;
 }
 
@@ -401,22 +405,22 @@ body {
       li {
         border-bottom: 1px dashed #ccc;
         display: flex;
-        font-size: 1.4rem;
+        font-size: 0.875em;
         padding: 8px;
         @media screen and (max-width: 559px) {
           flex-direction: column;
           time {
             align-self: center;
-            flex: 0 1 1.8rem;
+            flex: 0 1 1.125em;
           }
           div {
             align-self: auto;
-            flex: 0 1 1.8rem;
+            flex: 0 1 1.125em;
             margin-left: 0;
           }
           p {
             flex: 0 1 0;
-            margin: 1rem 0 0;
+            margin: 0.714286em 0 0;
           }
         }
       }
@@ -463,7 +467,7 @@ body {
       flex-wrap: wrap;
       justify-content: space-around;
       margin: 0;
-      padding-left: 1.6rem;
+      padding-left: 1em;
     }
     // MESSAGE------------------------------
     &__message {
@@ -483,9 +487,9 @@ body {
         display: flex;
         height: 24px;
         justify-content: space-between;
-        font-size: 1.2rem;
+        font-size: 0.75em;
         font-weight: normal;
-        line-height: 2.4rem;
+        line-height: 1.5em;
         padding: 0 12px;
         &:hover {
           background: #f0f0f0;
@@ -499,7 +503,7 @@ body {
       &-lead {
         align-items: center;
         display: flex;
-        font-size: 1.2rem;
+        font-size: 0.75em;
         height: 70px;
         padding: 0 12px;
       }
@@ -518,7 +522,7 @@ body {
         cursor: pointer;
         height: 100px;
         flex: 4 4 auto;
-        margin: 1.6rem 1.6rem 0 0;
+        margin: 1em 1em 0 0;
         min-width: 400px;
         &-head-container {
           display: flex;
@@ -526,7 +530,7 @@ body {
           justify-content: space-around;
           div,
           h2 {
-            font-size: 1.4rem;
+            font-size: 0.875em;
           }
         }
         img {
@@ -541,10 +545,10 @@ body {
       }
       //MESSAGE BLOCK @smartPhone------------------------------
       @media screen and (max-width: 559px) {
-        height: 6rem;
+        height: 3.75em;
         min-width: 320px;
         &-head-container h2 {
-          font-size: 2.4rem;
+          font-size: 1.5em;
         }
         img,
         &-heading-en,
@@ -555,7 +559,7 @@ body {
           border: none;
           height: 100%;
           justify-content: center;
-          line-height: 6rem;
+          line-height: 2.5em;
           &:after {
             margin-left: 8px;
           }
@@ -578,7 +582,7 @@ body {
           cursor: pointer;
           display: flex;
           flex-direction: column;
-          font-size: 1.2rem;
+          font-size: 0.75em;
           justify-content: center;
           text-align: center;
           &:hover {
@@ -593,7 +597,7 @@ body {
       @media screen and (max-width: 959px) {
         height: 100px;
         flex: 3 3 auto;
-        margin: 1.6rem 1.6rem 0 0;
+        margin: 1em 1em 0 0;
         min-width: 320px;
         .ruby,
         .l-section-header-link,
@@ -606,10 +610,10 @@ body {
           border-top: none;
           border-bottom: $border;
           color: $key-color;
-          height: 2.4rem;
+          height: 1.5em;
         }
         &-body {
-          height: 7.6rem;
+          height: 4.75em;
           &-upper {
             border: none;
             display: flex;
@@ -618,7 +622,7 @@ body {
             div {
               display: flex;
               flex: 1 1 auto;
-              font-size: 1.8rem;
+              font-size: 1.125em;
               &:nth-of-type(1) {
                 border-right: $border;
               }
@@ -631,7 +635,7 @@ body {
                 content: "\f0da";
                 font-family: "Font Awesome 5 Free";
                 font-weight: 900;
-                margin-right: 0.6rem;
+                margin-right: 0.33333em;
               }
             }
           }
@@ -658,7 +662,7 @@ body {
       }
       // RECRUIT @tablet------------------------------
       @media screen and (max-width: 959px) {
-        margin: 1.6rem 1.6rem 0 0;
+        margin: 1em 1em 0 0;
       }
     }
   }
@@ -701,7 +705,7 @@ body {
       border-top-width: 1px;
       h2 {
         margin: 0 auto;
-        font-size: 1.8rem;
+        font-size: 1.125em;
         .ruby {
           display: none;
         }
@@ -717,7 +721,7 @@ body {
         border-bottom: 1px solid #fafafa;
         cursor: pointer;
         display: block;
-        height: 4rem;
+        height: 2.5em;
         text-align: center;
         &:hover {
           background: #d0d0d0;
@@ -725,14 +729,14 @@ body {
         }
         a {
           color: #333;
-          font-size: 1.6rem;
-          line-height: 4rem;
+          font-size: 1em;
+          line-height: 2.5em;
           text-decoration: none;
           &:before {
             color: $key-color;
             content: "\f152";
             font-family: "Font Awesome 5 Free";
-            font-size: 1.2rem;
+            font-size: 0.75em;
             font-weight: 900; //or 900
             margin-right: 6px;
             vertical-align: 2px;
@@ -765,7 +769,7 @@ body {
       list-style: none;
       width: 960px;
       li {
-        font-size: 1.3rem;
+        font-size: 0.8125em;
         i {
           color: $key-color;
           margin-right: 4px;
@@ -798,7 +802,7 @@ body {
     padding-top: 16px;
     h2 {
       position: relative;
-      font-size: 1.3rem;
+      font-size: 0.8125em;
       font-weight: normal;
       &:after {
         background: #bbb;
@@ -854,11 +858,11 @@ body {
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          height: 16rem;
+          height: 1em;
           li {
             border-bottom: 1px solid #fafafa;
             cursor: pointer;
-            height: 4rem;
+            height: 2.5em;
             margin-left: 0;
             text-align: center;
             width: 50%;
@@ -870,8 +874,8 @@ body {
             }
             a {
               color: $black;
-              font-size: 1.6rem;
-              line-height: 4rem;
+              font-size: 1em;
+              line-height: 2.5em;
               text-decoration: none;
             }
           }
@@ -882,7 +886,7 @@ body {
       // height: 32rem;
       div.guide__index ul {
         flex-wrap: nowrap;
-        height: 32rem;
+        height: 2em;
         & li {
           width: 100%;
           &:nth-of-type(-n + 4) {
@@ -893,7 +897,7 @@ body {
     }
   }
   &__index-heading {
-    font-size: 1.3rem;
+    font-size: 0.8125em;
     font-weight: normal;
     &:before {
       color: $key-color;
@@ -907,9 +911,9 @@ body {
   &__index-body {
     list-style: none;
     li {
-      font-size: 1.3rem;
+      font-size: 0.8125em;
       height: 28px;
-      margin-left: 1.6rem;
+      margin-left: 1em;
       a {
         margin-left: 4px;
         &:hover {
@@ -938,7 +942,7 @@ footer {
   background: #c4c4c4;
   color: #fafafa;
   display: flex;
-  font-size: 1.6rem;
-  height: 6rem;
+  font-size: 1em;
+  height: 3.75em;
   justify-content: center;
 }
