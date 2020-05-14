@@ -2,7 +2,7 @@
 {
   // slideshow------------------------------
   const slide = document.getElementById("slide");
-  const img = new Array(
+  const slides = new Array(
     "./img/top-image1.jpg",
     "./img/top-image2.jpg",
     "./img/top-image3.jpg",
@@ -14,10 +14,10 @@
 
   function slideShow() {
     count++;
-    if (count === img.length) {
+    if (count === slides.length) {
       count = 0;
     }
-    slide.src = img[count];
+    slide.src = slides[count];
     setTimeout(() => {
       slide.style.opacity = 1;
     }, 300);
