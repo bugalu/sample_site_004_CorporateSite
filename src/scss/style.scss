@@ -23,7 +23,8 @@ body {
 
 //COMMON------------------------------
 
-.l-background-pattern {
+// .l-background-pattern {
+  body:after{
   background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, $white 3px, $white 4px),
     repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, $white 3px, $white 4px);
   height: 232px;
@@ -342,7 +343,7 @@ body {
   max-width: 960px;
   overflow-x: hidden;
   position: relative;
-  top: -218px;
+  // top: -218px;
   left: 0;
   right: 0;
   margin: auto;
@@ -760,7 +761,8 @@ body {
 // SECOND-NAV------------------------------
 .second-nav {
   height: 40px;
-  margin-top: -202px;
+  // margin-top: -202px;
+  margin-top: 1em;
   &__nav-area {
     max-width: 960px;
     margin: 0 auto;

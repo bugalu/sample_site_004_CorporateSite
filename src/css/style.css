@@ -10,13 +10,13 @@ body {
   font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
 }
 
-.l-background-pattern {
+body:after {
   background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, #fafafa 3px, #fafafa 4px), repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, #fafafa 3px, #fafafa 4px);
   height: 232px;
 }
 
 @media screen and (max-width: 959px) {
-  .l-background-pattern {
+  body:after {
     display: none;
   }
 }
@@ -463,7 +463,6 @@ body {
   max-width: 960px;
   overflow-x: hidden;
   position: relative;
-  top: -218px;
   left: 0;
   right: 0;
   margin: auto;
@@ -1040,7 +1039,7 @@ body {
 
 .second-nav {
   height: 40px;
-  margin-top: -202px;
+  margin-top: 1em;
 }
 
 .second-nav__nav-area {
