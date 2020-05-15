@@ -17,11 +17,11 @@
 </head>
 
 <body>
-  <div class="head-container">
-    <header class="header">
+  <header class="header">
+    <div class="head-container">
       <h1 class="header__company-name">
         <a href="index.html">
-          制作サンプル<span>(コーポレートサイト)</span>
+          制作サンプル<span class="u-small">(コーポレートサイト)</span>
         </a>
       </h1>
       <div class="header__menus">
@@ -61,12 +61,13 @@
         <i class="fas fa-bars" id="bar"></i>
       </div>
       <!-- header__menus-tab end -->
-    </header>
-    <nav class="nav" id="nav">
-      <ul>
-        <li class="nav__menu">
+    </div>
+    <!-- head-conatiner end -->
+    <nav class="header__nav" id="nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
           企業情報<span class="ruby" lang="en">Company Profile</span>
-          <ul class="nav__submenu">
+          <ul class="header__nav-sub-list">
             <li><a href="">社長メッセージ</a></li>
             <li><a href="">グループミッション</a></li>
             <li><a href="">会社概要</a></li>
@@ -75,9 +76,9 @@
             <li><a href="">コーポレートガバナンス</a></li>
           </ul>
         </li>
-        <li class="nav__menu">
+        <li class="header__nav-item">
           IR情報<span class="ruby" lang="en">Investor Relations</span>
-          <ul class="nav__submenu">
+          <ul class="header__nav-sub-list">
             <li><a href="">決算短信</a></li>
             <li><a href="">決算説明会</a></li>
             <li><a href="">財務ハイライト</a></li>
@@ -88,24 +89,24 @@
             <li><a href="">財務諸表</a></li>
           </ul>
         </li>
-        <li class="nav__menu">
+        <li class="header__nav-item">
           ニュースリリース<span class="ruby" lang="en">News Release</span>
         </li>
-        <li class="nav__menu">
+        <li class="header__nav-item">
           株価情報<span class="ruby" lang="en">Stock Quotations</span>
         </li>
-        <li class="nav__menu">
+        <li class="header__nav-item">
           株主・投資家の皆様へ<span class="ruby" lang="en">For Sharefolders and Investors</span>
-          <ul class="nav__submenu">
+          <ul class="header__nav-sub-list">
             <li><a href="">株価情報</a></li>
             <li><a href="">株主総会</a></li>
             <li><a href="">株主優待・配当金</a></li>
             <li><a href="">IRカレンダー</a></li>
           </ul>
         </li>
-        <li class="nav__menu">
+        <li class="header__nav-item">
           ESG活動<span class="ruby" lang="en">Environment Society Governance</span>
-          <ul class="nav__submenu">
+          <ul class="header__nav-sub-list">
             <li><a href="">環境保護活動</a></li>
             <li><a href="">社会貢献活動</a></li>
             <li><a href="">募金活動</a></li>
@@ -119,209 +120,206 @@
       </ul>
       <i class="fas fa-times-circle fa-4x nav__close" id="close"></i>
     </nav>
-  </div>
-  <!-- head-conatiner end -->
+  </header>
 
   <!-- <div class="l-background-pattern" aria-hidden="true"></div> -->
-  <div class="main-wrapper l-container">
-    <div class="main__top-images">
-      <img src="./img/top-image1.jpg" alt="企業イメージ画像" id="slide" />
+  <main class="main l-container">
+    <div class="hero">
+      <img src="./img/top-image1.jpg" alt="ここに画像代替コメントが入ります" id="slide" />
     </div>
     <!-- top-image end -->
 
-    <main class="main-container">
-      <div class="main__upper-container">
-        <section class="main__news l-section-base">
-          <header class="main__news-header l-section-header">
-            <h2>お知らせ<span class="ruby" lang="en">News</span></h2>
-            <div class="l-section-header-link">一覧はこちら</div>
-          </header>
-          <ul class="main__news-body">
-            <li>
-              <time datetime="2019-11-18">2019.11.18</time>
-              <div class="main__news-body-tag c-blue">Info</div>
-              <p>
+    <div class="grid-container">
+      <section class="news l-section-base">
+        <div class="news__header l-section-header">
+          <h2>お知らせ<span class="ruby" lang="en">News</span></h2>
+          <div class="l-section-header-link">一覧はこちら</div>
+        </div>
+        <ul class="news__body">
+          <li>
+            <time datetime="2019-11-18">2019.11.18</time>
+            <div class="news__body-tag c-blue">Info</div>
+            <p>
                 当サイトは<a href="https://or-ikeda.net">ORイケダ事務所</a>による制作サンプルサイトです。「お知らせ」欄を除く全ての内容は架空のものとなっております。
               </p>
-            </li>
-            <li>
-              <time datetime="2019-12-02">2019.12.02</time>
-              <div class="main__news-body-tag c-green">Code</div>
-              <p>
+          </li>
+          <li>
+            <time datetime="2019-12-02">2019.12.02</time>
+            <div class="news__body-tag c-green">Code</div>
+            <p>
                 レスポンシブデザインへの対応を完了しました。PC、タブレット、スマートフォンそれぞれに最適化しています。ブレークポイントは、960pxと560pxで設計いたしました。
               </p>
-            </li>
-            <li>
-              <time datetime="2019-11-18">2019.11.18</time>
-              <div class="main__news-body-tag c-pink">Note</div>
-              <p>
+          </li>
+          <li>
+            <time datetime="2019-11-18">2019.11.18</time>
+            <div class="news__body-tag c-pink">Note</div>
+            <p>
                 グローバルナビゲーション部分（ページ上部の「企業情報」などが表示されているパート）のドロップダウンメニュー化を完了しました。これにより、サブメニューが表示されるようになっております。実装には、jQueryのプラグインなどは使用せず、CSSのみで記述いたしました。
               </p>
-            </li>
-            <li>
-              <time datetime="2019-11-17">2019.11.17</time>
-              <div class="main__news-body-tag c-green">Code</div>
-              <p>
+          </li>
+          <li>
+            <time datetime="2019-11-17">2019.11.17</time>
+            <div class="news__body-tag c-green">Code</div>
+            <p>
                 メインビジュアルにスライドショーを実装しました。プラグインは使用せず、シンプルなJavaScriptで記述しております。
               </p>
-            </li>
-            <li>
-              <time datetime="2019-11-16">2019.11.16</time>
-              <div class="main__news-body-tag c-green">Code</div>
-              <p>
+          </li>
+          <li>
+            <time datetime="2019-11-16">2019.11.16</time>
+            <div class="news__body-tag c-green">Code</div>
+            <p>
                 当サイトは、Microsoft社製のブラウザ「Internet
                 Explorer」には対応しておりません。「Internet
                 Explorer」で閲覧した場合、レイアウトの崩れが生じるなど、快適なブラウジングが出来ない場合があります。
               </p>
-            </li>
-            <li>
-              <time datetime="2019-11-16">2019.11.16</time>
-              <div class="main__news-body-tag c-pink">Note</div>
-              <p>
+          </li>
+          <li>
+            <time datetime="2019-11-16">2019.11.16</time>
+            <div class="news__body-tag c-pink">Note</div>
+            <p>
                 当サイトでは、バナーを含む全ての画像について、素材サイト<a
                   href="https://jp.freepik.com/home">freepik</a>のものを使用しております。当事務所はfreepikの正規ユーザであるため、画像利用に関するクレジットは表記しておりません。
               </p>
-            </li>
-          </ul>
-        </section>
-        <div class="main__info">
-          <section class="main__info__message l-section-base">
-            <div class="main__info__message-head-container main__info-button">
-              <h2 class="main__info__message-heading-ja ">
+          </li>
+        </ul>
+      </section>
+      <div class="info-block">
+        <section class="message l-section-base">
+          <div class="message-head-container main__info-button">
+            <h2 class="message-heading-ja ">
                 社長メッセージ
               </h2>
-              <h2 class="main__info__message-heading-en" lang="en">Top Message</h2>
-              <div class="main__info__message-lead">
-                <p>
+            <h2 class="message-heading-en" lang="en">Top Message</h2>
+            <div class="message-lead">
+              <p>
                   親譲りの無鉄砲で小供の時から損ばかりしている。
                   <span class="ruby" lang="en"><br />I'm always damaged by my lack of thought.
                   </span>
                 </p>
-              </div>
-              <!-- main__info__message-lead end -->
             </div>
-            <!-- main__info-message-head-container end-->
-            <div class="main__info__message-ceo-img">
-              <img src="./img/ceo.jpg" alt="CEOの写真" />
-            </div>
-          </section>
-          <section class="main__info__ir l-section-base">
-            <div class="main__info__ir-header l-section-header main__info-button">
-              <h2>IR最新情報<span class="ruby" lang="en">Investor Relations</span></h2>
-              <div class="l-section-header-link">IR情報一覧</div>
-            </div>
-            <!-- ir-header end -->
-            <div class="main__info__ir-body">
-              <div class="main__info__ir-body-upper">
-                <div class="main__info__ir-body-upper-left">
-                  <img src="./img/brochure_14147.jpg" alt="company brochure" class="brochure" />
-                  <p>会社案内</p>
-                </div>
-                <!-- ir-body-left end -->
-                <div class="main__info__ir-body-upper-right">
-                  <img src="./img/annual_1701.jpg" alt="annual report" class="annual" />
-                  <p>年次報告書</p>
-                </div>
-              </div>
-              <!-- main__info__ir-body-upper end -->
-              <div class="main__info__ir-body-lower l-body-lower">
-                <ul class="main__info__ir-body-lower-index l-body-lower-index">
-                  <li><a href="">決算短信</a></li>
-                  <li><a href="">決算説明会</a></li>
-                  <li><a href="">財務ハイライト</a></li>
-                </ul>
-                <ul class="main__info__ir-body-lower-index l-body-lower-index">
-                  <li><a href="">売上月次報告</a></li>
-                  <li><a href="">有価証券報告書</a></li>
-                  <li><a href="">財務諸表</a></li>
-                </ul>
-              </div>
-              <!-- main__info__ir-body-lower end -->
-            </div>
-          </section>
-          <div class="main__info__recruit l-section-base main__info-button">
-            <img src="./img/banner_recruit.jpg" alt="banner of hiring" />
-            <h2 class="main__info__recruit-heading">採用情報</h2>
+            <!-- message-lead end -->
           </div>
-        </div>
-        <!-- main__info end -->
-      </div>
-      <!-- main__upper-container end -->
-      <div class="main__lower-container">
-        <section class="l-section-base">
-          <div class="l-section-header">
-            <h2>会社情報<span class="ruby" lang="en">Company Profile</span></h2>
-          </div>
-          <!-- company-profile-header end -->
-          <img src="./img/company.jpg" alt="" class="main__lower-container__section-image" />
-          <div class="main__lower-container__section-body l-body-lower">
-            <ul class="main__lower-container__section-body__index l-body-lower-index">
-              <li><a href="">社長メッセージ</a></li>
-              <li><a href="">グループミッション</a></li>
-              <li><a href="">中期経営計画</a></li>
-              <li><a href="">会社概要</a></li>
-              <li><a href="">沿革</a></li>
-            </ul>
-            <ul class="main__lower-container__section-body__index l-body-lower-index">
-              <li><a href="">組織図</a></li>
-              <li><a href="">事業拠点</a></li>
-              <li><a href="">本社地図</a></li>
-              <li><a href="">コーポレートガバナンス</a></li>
-              <li><a href="">コンプライアンス</a></li>
-            </ul>
+          <!-- message-head-container end-->
+          <div class="message-ceo-img">
+            <img src="./img/ceo.jpg" alt="CEOの写真" />
           </div>
         </section>
-        <section class="l-section-base">
-          <div class="l-section-header">
-            <h2>
+        <section class="ir l-section-base">
+          <div class="ir-header l-section-header main__info-button">
+            <h2>IR最新情報<span class="ruby" lang="en">Investor Relations</span></h2>
+            <div class="l-section-header-link">IR情報一覧</div>
+          </div>
+          <!-- ir-header end -->
+          <div class="ir-body">
+            <div class="ir-body-upper">
+              <div class="ir-body-upper-left">
+                <img src="./img/brochure_14147.jpg" alt="company brochure" class="brochure" />
+                <p>会社案内</p>
+              </div>
+              <!-- ir-body-left end -->
+              <div class="ir-body-upper-right">
+                <img src="./img/annual_1701.jpg" alt="annual report" class="annual" />
+                <p>年次報告書</p>
+              </div>
+            </div>
+            <!-- ir-body-upper end -->
+            <div class="ir-body-lower l-body-lower">
+              <ul class="ir-body-lower-index l-body-lower-index">
+                <li><a href="">決算短信</a></li>
+                <li><a href="">決算説明会</a></li>
+                <li><a href="">財務ハイライト</a></li>
+              </ul>
+              <ul class="ir-body-lower-index l-body-lower-index">
+                <li><a href="">売上月次報告</a></li>
+                <li><a href="">有価証券報告書</a></li>
+                <li><a href="">財務諸表</a></li>
+              </ul>
+            </div>
+            <!-- ir-body-lower end -->
+          </div>
+        </section>
+        <div class="recruit l-section-base main__info-button">
+          <img src="./img/banner_recruit.jpg" alt="banner of hiring" />
+          <h2 class="recruit-heading">採用情報</h2>
+        </div>
+      </div>
+      <!-- info-block end -->
+    </div>
+    <!-- main__upper-container end -->
+
+    <div class="grid-container links-block">
+      <section class="l-section-base">
+        <div class="l-section-header">
+          <h2>会社情報<span class="ruby" lang="en">Company Profile</span></h2>
+        </div>
+        <!-- company-profile-header end -->
+        <img src="./img/company.jpg" alt="" class="links-block__section-image" />
+        <div class="links-block__section-body l-body-lower">
+          <ul class="links-block__section-body__index l-body-lower-index">
+            <li><a href="">社長メッセージ</a></li>
+            <li><a href="">グループミッション</a></li>
+            <li><a href="">中期経営計画</a></li>
+            <li><a href="">会社概要</a></li>
+            <li><a href="">沿革</a></li>
+          </ul>
+          <ul class="links-block__section-body__index l-body-lower-index">
+            <li><a href="">組織図</a></li>
+            <li><a href="">事業拠点</a></li>
+            <li><a href="">本社地図</a></li>
+            <li><a href="">コーポレートガバナンス</a></li>
+            <li><a href="">コンプライアンス</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="l-section-base">
+        <div class="l-section-header">
+          <h2>
               株主・投資家の皆様へ<span class="ruby" lang="en">For Sharefolders and Investors</span>
             </h2>
-          </div>
-          <!-- company-profile-header end -->
-          <img src="./img/investor.jpg" alt="" class="main__lower-container__section-image" />
-          <div class="main__lower-container__section-body l-body-lower">
-            <ul class="main__lower-container__section-body__index l-body-lower-index">
-              <li><a href="">株価情報</a></li>
-              <li><a href="">株主総会</a></li>
-              <li><a href="">株主優待</a></li>
-              <li><a href="">IRカレンダー</a></li>
-            </ul>
-            <ul class="main__lower-container__section-body__index l-body-lower-index">
-              <li><a href="">財務・業績ハイライト</a></li>
-              <li><a href="">統合報告書</a></li>
-              <li><a href="">電子公告・定款</a></li>
-              <li><a href="">IRライブラリ</a></li>
-            </ul>
-          </div>
-        </section>
-        <section class="l-section-base">
-          <div class="l-section-header">
-            <h2>
+        </div>
+        <!-- company-profile-header end -->
+        <img src="./img/investor.jpg" alt="" class="links-block__section-image" />
+        <div class="links-block__section-body l-body-lower">
+          <ul class="links-block__section-body__index l-body-lower-index">
+            <li><a href="">株価情報</a></li>
+            <li><a href="">株主総会</a></li>
+            <li><a href="">株主優待</a></li>
+            <li><a href="">IRカレンダー</a></li>
+          </ul>
+          <ul class="links-block__section-body__index l-body-lower-index">
+            <li><a href="">財務・業績ハイライト</a></li>
+            <li><a href="">統合報告書</a></li>
+            <li><a href="">電子公告・定款</a></li>
+            <li><a href="">IRライブラリ</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="l-section-base">
+        <div class="l-section-header">
+          <h2>
               ESG活動<span class="ruby" lang="en">Environment Society Governance</span>
             </h2>
-          </div>
-          <!-- company-profile-header end -->
-          <img src="./img/social.jpg" alt="" class="main__lower-container__section-image" />
-          <div class="main__lower-container__section-body l-body-lower">
-            <ul class="main__lower-container__section-body__index l-body-lower-index">
-              <li><a href="">社会貢献活動</a></li>
-              <li><a href="">環境保護活動</a></li>
-              <li><a href="">地域貢献活動</a></li>
-              <li><a href="">募金活動</a></li>
-            </ul>
-            <ul class="main__lower-container__section-body__index l-body-lower-index">
-              <li><a href="">東日本大震災復興支援</a></li>
-              <li><a href="">産業廃棄物削減</a></li>
-              <li><a href="">ISO26000</a></li>
-              <li><a href="">ESG報告書</a></li>
-            </ul>
-          </div>
-        </section>
-      </div>
-      <!-- main__lower-container end -->
-    </main>
-    <!-- main-container end -->
-  </div>
+        </div>
+        <!-- company-profile-header end -->
+        <img src="./img/social.jpg" alt="" class="links-block__section-image" />
+        <div class="links-block__section-body l-body-lower">
+          <ul class="links-block__section-body__index l-body-lower-index">
+            <li><a href="">社会貢献活動</a></li>
+            <li><a href="">環境保護活動</a></li>
+            <li><a href="">地域貢献活動</a></li>
+            <li><a href="">募金活動</a></li>
+          </ul>
+          <ul class="links-block__section-body__index l-body-lower-index">
+            <li><a href="">東日本大震災復興支援</a></li>
+            <li><a href="">産業廃棄物削減</a></li>
+            <li><a href="">ISO26000</a></li>
+            <li><a href="">ESG報告書</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <!-- main__lower-container end -->
+  </main>
   <!-- main-wrapper end -->
   <div class="second-nav l-section-header">
     <nav class="second-nav__nav-area">
