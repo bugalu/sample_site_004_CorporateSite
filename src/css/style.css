@@ -10,13 +10,18 @@ body {
   font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
 }
 
-body:after {
+body:before {
+  position: absolute;
+  top: 8em;
+  left: 0;
+  right: 0;
+  content: "";
+  height: 14.5em;
   background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, #fafafa 3px, #fafafa 4px), repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, #fafafa 3px, #fafafa 4px);
-  height: 232px;
 }
 
 @media screen and (max-width: 959px) {
-  body:after {
+  body:before {
     display: none;
   }
 }

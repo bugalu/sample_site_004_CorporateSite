@@ -19,19 +19,24 @@ body {
   color: $black;
   font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue", "Hiragino Sans", "ヒラギノ角ゴ ProN W3",
     Arial, メイリオ, Meiryo, sans-serif;
+  &:before {
+    position: absolute;
+    top: 8em;
+    left: 0;
+    right: 0;
+    content: "";
+    height: 14.5em;
+    background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, $white 3px, $white 4px),
+      repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, $white 3px, $white 4px);
+    @media screen and (max-width: 959px) {
+      display: none;
+    }
+  }
 }
 
 //COMMON------------------------------
 
 // .l-background-pattern {
-  body:after{
-  background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, $white 3px, $white 4px),
-    repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, $white 3px, $white 4px);
-  height: 232px;
-  @media screen and (max-width: 959px) {
-    display: none;
-  }
-}
 .l-section-base {
   background-color: $white;
   border: $border;
@@ -145,7 +150,7 @@ body {
         font-size: 1.125em;
         span {
           display: inline-block;
-          font-size: 1.38462em; 
+          font-size: 1.38462em;
           vertical-align: text-top;
         }
       }
@@ -297,7 +302,7 @@ body {
     opacity: 0.9;
     position: fixed;
     transition: 0.5s;
-    // top: -3.375em; 
+    // top: -3.375em;
     z-index: 1;
     &.isVisible {
       top: -8px;
@@ -305,7 +310,7 @@ body {
     & > ul {
       display: flex;
       flex-direction: column;
-      height: 18.75em; 
+      height: 18.75em;
       & > li.nav__menu {
         background: #ddd;
         cursor: pointer;
