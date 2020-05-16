@@ -41,7 +41,7 @@ body:before {
   border: solid 1px #d9d9d9;
 }
 
-.l-section-header {
+.c-section-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -57,21 +57,21 @@ body:before {
   padding: 0 12px;
 }
 
-.l-section-header h2 {
+.c-section-header h2 {
   font-size: 0.875em;
   font-weight: normal;
 }
 
-.l-section-header h2 .ruby {
+.c-section-header h2 .ruby {
   margin-left: 6px;
 }
 
-.l-section-header-link {
+.c-section-header-link {
   cursor: pointer;
   font-size: 0.687em;
 }
 
-.l-section-header-link::before {
+.c-section-header-link::before {
   color: #68a63f;
   content: "\f152";
   font-family: "Font Awesome 5 Free";
@@ -852,7 +852,7 @@ body:before {
     min-width: 320px;
   }
   .ir .ruby,
-  .ir .l-section-header-link,
+  .ir .c-section-header-link,
   .ir img, .ir-body-lower {
     display: none;
   }
@@ -949,7 +949,7 @@ body:before {
   width: 310px;
 }
 
-.links-block section .l-section-header {
+.links-block section .c-section-header {
   height: 40px;
 }
 
@@ -982,14 +982,14 @@ body:before {
   .links-block .l-section-base:not(:last-of-type) {
     border-bottom: none;
   }
-  .links-block .l-section-header {
+  .links-block .c-section-header {
     border-top-width: 1px;
   }
-  .links-block .l-section-header h2 {
+  .links-block .c-section-header h2 {
     margin: 0 auto;
     font-size: 1.125em;
   }
-  .links-block .l-section-header h2 .ruby {
+  .links-block .c-section-header h2 .ruby {
     display: none;
   }
   .links-block__section-body__index {
