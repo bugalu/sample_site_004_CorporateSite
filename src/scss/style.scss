@@ -5,12 +5,14 @@
 /* Variables
    ------------------------------------------------------ */
 /*** color ***/
+$main-color: #fafafa;
 $key-color: #003399;
+$border-color: #d9d9d9;
 
 /* Default Style
    ------------------------------------------------------ */
 body {
-  background: repeating-linear-gradient(-45deg, #fafafa 0px, #fafafa 3px, #eee 3px, #eeeeee 4px);
+  background: repeating-linear-gradient(-45deg, $main-color 0px, $main-color 3px, #eee 3px, #eeeeee 4px);
   color: #333;
   font-family: "Hiragino Kaku Gothic Pro N", "Segoe UI", "Helvetica Neue", "Hiragino Sans", "ヒラギノ角ゴ ProN W3",
     Arial, メイリオ, Meiryo, sans-serif;
@@ -23,8 +25,8 @@ body:before {
   right: 0;
   content: "";
   height: 14.5em;
-  background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, #fafafa 3px, #fafafa 4px),
-    repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, #fafafa 3px, #fafafa 4px);
+  background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, $main-color 3px, $main-color 4px),
+    repeating-linear-gradient(-45deg, #ddd 0, #ddd 3px, $main-color 3px, $main-color 4px);
 }
 
 @media screen and (max-width: 959px) {
@@ -43,9 +45,11 @@ body:before {
   max-width: 960px;
 }
 
+/* Section共通
+   ------------------------------------------------------ */
 .l-section-base {
-  background-color: #fafafa;
-  border: solid 1px #d9d9d9;
+  background-color: $main-color;
+  border: solid 1px $border-color;
 }
 /* Grid
    ------------------------------------------------------ */
@@ -92,7 +96,7 @@ body:before {
 .c-tag {
   align-self: center;
   border-radius: 4px;
-  color: #fafafa;
+  color: $main-color;
   flex: 1 1 auto;
   height: 20px;
   line-height: 20px;
@@ -115,7 +119,7 @@ body:before {
 
 .c-sectionHeader {
   align-items: center;
-  background: linear-gradient(#fafafa 0%, #fafafa 65%, #eee 100%);
+  background: linear-gradient($main-color 0%, $main-color 65%, #eee 100%);
   border-top: 3px solid $key-color;
   display: flex;
   justify-content: space-between;
@@ -188,7 +192,7 @@ body:before {
 }
 
 .header {
-  background: linear-gradient(#fafafa 0%, #fafafa 65%, #eee);
+  background: linear-gradient($main-color 0%, $main-color 65%, #eee);
   display: flex;
   flex-direction: column;
 }
@@ -216,7 +220,7 @@ body:before {
 .header__font-menu {
   background-color: $key-color;
   border-radius: 0 0 6px 6px;
-  color: #fafafa;
+  color: $main-color;
   font-size: 0.75em;
   height: 32px;
   margin-left: 16px;
@@ -225,13 +229,13 @@ body:before {
 }
 
 .header__font-menu th {
-  color: #fafafa;
+  color: $main-color;
   font-weight: normal;
   width: 80px;
 }
 
 .header__font-menu td {
-  border-left: solid 1px #d9d9d9;
+  border-left: solid 1px $border-color;
   cursor: pointer;
   width: 34px;
 }
@@ -253,7 +257,7 @@ body:before {
     margin-right: 0.75em;
   }
   .header__menus-tablet button {
-    background: #fafafa;
+    background: $main-color;
     border: 2px solid $key-color;
     border-radius: 4px;
     font-size: 0.75em;
@@ -303,7 +307,7 @@ body:before {
 }
 
 .nav__list {
-  background: #fafafa;
+  background: $main-color;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -311,7 +315,7 @@ body:before {
 }
 
 .nav__item {
-  background: linear-gradient(#fafafa 0, #fafafa 25%, #eee 100%);
+  background: linear-gradient($main-color 0, $main-color 25%, #eee 100%);
   box-shadow: 0 1px 1px 0px #e0e0e0;
   cursor: pointer;
   display: flex;
@@ -324,7 +328,7 @@ body:before {
 }
 
 .nav__item:hover {
-  background: linear-gradient(#eee 0, #eee 25%, #fafafa 100%);
+  background: linear-gradient(#eee 0, #eee 25%, $main-color 100%);
 }
 
 .nav__item:hover > .nav__subList {
@@ -345,8 +349,8 @@ body:before {
 }
 
 .nav__subListItem {
-  background: #fafafa;
-  border-bottom: solid 1px #d9d9d9;
+  background: $main-color;
+  border-bottom: solid 1px $border-color;
   display: flex;
   flex-direction: column;
   height: 36px;
@@ -358,7 +362,7 @@ body:before {
 }
 
 .nav__subListItem:hover a {
-  color: #fafafa;
+  color: $main-color;
 }
 
 .nav__subListItem a {
@@ -437,13 +441,13 @@ body:before {
 .hero {
   display: block;
   margin-bottom: 1em;
-  background: #fafafa;
+  background: $main-color;
   cursor: pointer;
 }
 
 .hero img {
   transition-duration: 0.8s;
-  border: solid 1px #d9d9d9;
+  border: solid 1px $border-color;
   width: 100%;
 }
 
@@ -561,14 +565,14 @@ body:before {
 }
 
 .message-head-container {
-  border-right: solid 1px #d9d9d9;
+  border-right: solid 1px $border-color;
   flex: 1 1 auto;
   min-width: 180px;
 }
 
 .message-heading-ja,
 .message-heading-en {
-  border-bottom: solid 1px #d9d9d9;
+  border-bottom: solid 1px $border-color;
   color: $key-color;
   cursor: pointer;
   display: flex;
@@ -673,7 +677,7 @@ body:before {
 }
 
 .ir-body-upper {
-  border-bottom: solid 1px #d9d9d9;
+  border-bottom: solid 1px $border-color;
   display: flex;
   height: 148px;
   justify-content: space-around;
@@ -713,9 +717,9 @@ body:before {
     display: none;
   }
   .ir-header {
-    background: #fafafa;
+    background: $main-color;
     border-top: none;
-    border-bottom: solid 1px #d9d9d9;
+    border-bottom: solid 1px $border-color;
     color: $key-color;
     height: 1.5em;
   }
@@ -734,7 +738,7 @@ body:before {
     font-size: 1.125em;
   }
   .ir-body-upper div:nth-of-type(1) {
-    border-right: solid 1px #d9d9d9;
+    border-right: solid 1px $border-color;
   }
   .ir-body-upper div:hover {
     background: #f0f0f0;
@@ -829,10 +833,10 @@ body:before {
     width: 50%;
   }
   .links-block__section-body__index:first-child {
-    border-right: 1px solid #fafafa;
+    border-right: 1px solid $main-color;
   }
   .links-block__section-body__index li {
-    border-bottom: 1px solid #fafafa;
+    border-bottom: 1px solid $main-color;
     cursor: pointer;
     display: block;
     height: 2.5em;
@@ -904,7 +908,7 @@ body:before {
 }
 
 .guide__wrapper {
-  background: #fafafa;
+  background: $main-color;
   margin-top: -16px;
   width: 100%;
 }
@@ -987,7 +991,7 @@ body:before {
     flex-wrap: wrap;
   }
   .guide__index-container div.guide__index ul li {
-    border-bottom: 1px solid #fafafa;
+    border-bottom: 1px solid $main-color;
     cursor: pointer;
     height: 2.5em;
     margin-left: 0;
@@ -995,7 +999,7 @@ body:before {
     width: 50%;
   }
   .guide__index-container div.guide__index ul li:nth-of-type(-n + 4) {
-    border-right: 1px solid #fafafa;
+    border-right: 1px solid $main-color;
   }
   .guide__index-container div.guide__index ul li:hover {
     background: #d0d0d0;
@@ -1071,7 +1075,7 @@ body:before {
 footer {
   align-items: center;
   background: #c4c4c4;
-  color: #fafafa;
+  color: $main-color;
   display: flex;
   font-size: 1em;
   height: 3.75em;
