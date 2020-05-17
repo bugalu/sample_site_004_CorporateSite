@@ -48,10 +48,8 @@ body:before {
    ------------------------------------------------------ */
 .l-gridContainer {
   display: flex;
-
   justify-content: space-between;
 }
-
 @media screen and (max-width: 959px) {
   .l-gridContainer {
     display: block;
@@ -68,8 +66,7 @@ body:before {
   border: solid 1px $border-color;
   background-color: $main-color;
 }
-/* Site Title
-   ------------------------------------------------------ */
+/*** Site Title ***/
 .c-siteTitle {
   display: flex;
   margin-left: 6px;
@@ -103,8 +100,7 @@ body:before {
   }
 }
 
-/* Support Menu
-   ------------------------------------------------------ */
+/*** Support Menu ***/
 .c-supportMenu {
   display: flex;
   margin-top: 6px;
@@ -118,14 +114,12 @@ body:before {
   display: flex;
   margin-left: 15px;
 }
-
 .c-supportMenuLink {
   margin-left: 4px;
   font-family: YuGothic;
 }
 
-/* Tag
-   ------------------------------------------------------ */
+/*** Tag ***/
 .c-tag {
   margin-left: 8px;
   min-width: 72px;
@@ -154,6 +148,16 @@ body:before {
   // display: flex;
   // flex-direction: column;
   background: linear-gradient($main-color 0%, $main-color 65%, #eee);
+}
+
+/*** User Support Menus ***/
+.p-userSupports {
+  display: flex;
+}
+@media screen and (max-width: 959px) {
+  .p-userSupports {
+    display: none;
+  }
 }
 
 /*********************** ↑ l,c,p 精査済み *************************/
@@ -232,16 +236,6 @@ body:before {
 @media screen and (max-width: 959px) {
   .l-body-lower-index li:before {
     content: "";
-  }
-}
-
-.header__menus {
-  display: flex;
-}
-
-@media screen and (max-width: 959px) {
-  .header__menus {
-    display: none;
   }
 }
 

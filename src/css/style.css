@@ -67,8 +67,7 @@ body:before {
   background-color: #fafafa;
 }
 
-/* Site Title
-   ------------------------------------------------------ */
+/*** Site Title ***/
 .c-siteTitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,8 +106,7 @@ body:before {
   }
 }
 
-/* Support Menu
-   ------------------------------------------------------ */
+/*** Support Menu ***/
 .c-supportMenu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,8 +133,7 @@ body:before {
   font-family: YuGothic;
 }
 
-/* Tag
-   ------------------------------------------------------ */
+/*** Tag ***/
 .c-tag {
   margin-left: 8px;
   min-width: 72px;
@@ -171,6 +168,19 @@ body:before {
 .p-header {
   background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), color-stop(65%, #fafafa), to(#eee));
   background: linear-gradient(#fafafa 0%, #fafafa 65%, #eee);
+}
+
+/*** User Support Menus ***/
+.p-userSupports {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 959px) {
+  .p-userSupports {
+    display: none;
+  }
 }
 
 /*********************** ↑ l,c,p 精査済み *************************/
@@ -260,18 +270,6 @@ body:before {
 @media screen and (max-width: 959px) {
   .l-body-lower-index li:before {
     content: "";
-  }
-}
-
-.header__menus {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (max-width: 959px) {
-  .header__menus {
-    display: none;
   }
 }
 
