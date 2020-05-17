@@ -44,19 +44,29 @@ body:before {
   width: 95%;
   max-width: 960px;
 }
-
-/* Section共通
-   ------------------------------------------------------ */
-.l-section-base {
-  background-color: $main-color;
-  border: solid 1px $border-color;
-}
 /* Grid
    ------------------------------------------------------ */
+.l-gridContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 959px) {
+  .l-gridContainer {
+    display: block;
+  }
+}
 
 /* ======================================================
    Object
    ====================================================== */
+/* Component
+   ------------------------------------------------------ */
+/*** Section共通 ***/
+.c-sectionBase {
+  background-color: $main-color;
+  border: solid 1px $border-color;
+}
 /* Site Title
    ------------------------------------------------------ */
 .c-siteTitle {
@@ -73,9 +83,9 @@ body:before {
   &:before {
     content: "";
     display: inline-block;
-    background-image: url(../img/or-logo-navy.png);
+    background-image: url(../img/logo0003navy.png);
     background-size: contain;
-    width: 40px;
+    width: 128px;
     height: 40px;
     vertical-align: middle;
   }
@@ -117,7 +127,7 @@ body:before {
 /*********************** ↑ l,c,p 精査済み *************************/
 /*********************** ↓ l,c,p 未精査 *************************/
 
-.c-sectionHeader {
+.c-sectionHeading {
   align-items: center;
   background: linear-gradient($main-color 0%, $main-color 65%, #eee 100%);
   border-top: 3px solid $key-color;
@@ -126,21 +136,21 @@ body:before {
   padding: 0 12px;
 }
 
-.c-sectionHeader h2 {
+.c-sectionHeading h2 {
   font-size: 0.875em;
   font-weight: normal;
 }
 
-.c-sectionHeader h2 .ruby {
+.c-sectionHeading h2 .ruby {
   margin-left: 6px;
 }
 
-.c-sectionHeader__link {
+.c-sectionHeading__link {
   cursor: pointer;
   font-size: 0.687em;
 }
 
-.c-sectionHeader__link::before {
+.c-sectionHeading__link::before {
   color: $key-color;
   content: "\f152";
   font-family: "Font Awesome 5 Free";
@@ -358,7 +368,7 @@ body:before {
 }
 
 .nav__subListItem:hover {
-  background: #90c76b;
+  background: $key-color;
 }
 
 .nav__subListItem:hover a {
@@ -423,16 +433,16 @@ body:before {
   }
 }
 
-.main {
+.l-main {
   overflow-x: hidden;
   position: relative;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 1em auto 0;
 }
 
 @media screen and (max-width: 959px) {
-  .main {
+  .l-main {
     overflow: visible;
     top: 0;
   }
@@ -457,22 +467,6 @@ body:before {
 
 .transparent {
   opacity: 0;
-}
-
-.main-container {
-  margin-top: 1em;
-  width: 100%;
-}
-
-.grid-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-@media screen and (max-width: 959px) {
-  .grid-container {
-    display: block;
-  }
 }
 
 .news {
@@ -711,7 +705,7 @@ body:before {
     min-width: 320px;
   }
   .ir .ruby,
-  .ir .c-sectionHeader__link,
+  .ir .c-sectionHeading__link,
   .ir img,
   .ir-body-lower {
     display: none;
@@ -790,7 +784,7 @@ body:before {
   width: 310px;
 }
 
-.links-block section .c-sectionHeader {
+.links-block section .c-sectionHeading {
   height: 40px;
 }
 
@@ -818,14 +812,14 @@ body:before {
   .links-block .l-section-base:not(:last-of-type) {
     border-bottom: none;
   }
-  .links-block .c-sectionHeader {
+  .links-block .c-sectionHeading {
     border-top-width: 1px;
   }
-  .links-block .c-sectionHeader h2 {
+  .links-block .c-sectionHeading h2 {
     margin: 0 auto;
     font-size: 1.125em;
   }
-  .links-block .c-sectionHeader h2 .ruby {
+  .links-block .c-sectionHeading h2 .ruby {
     display: none;
   }
   .links-block__section-body__index {
