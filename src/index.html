@@ -20,41 +20,42 @@
   <header class="p-header">
     <div class="l-header-container">
       <div class="l-container">
-        <h1 class="c-siteTitle">
+        <h1 class="c-siteTitle l-siteTitle">
           <a href="index.html" class="c-siteTitle__link">
             サンプルサイト<!-- <span class="u-small">(コーポレートサイト)</span> -->
           </a>
         </h1>
         <!-- <div class="header__menus"> -->
-        <div class="p-userSupports">
+        <div class="p-userSupports l-userSupports">
           <ul class="c-supportMenu">
-            <li class="c-supportMenuItem">
-              <a href="" class="c-supportMenuLink">
+            <li class="c-supportMenu__item">
+              <a href="" class="c-supportMenu__link">
                 <i class="fas fa-sitemap" aria-hidden="true"></i>
                 サイトマップ
               </a>
             </li>
-            <li class="c-supportMenuItem">
-              <a href="" class="c-supportMenuLink">
+            <li class="c-supportMenu__item">
+              <a href="" class="c-supportMenu__link">
                 <i class="fas fa-question-circle" aria-hidden="true"></i>
                 FAQ
               </a>
             </li>
-            <li class="c-supportMenuItem">
-              <a href="" class="c-supportMenuLink">
+            <li class="c-supportMenu__item">
+              <a href="" class="c-supportMenu__link">
                 <i class="far fa-envelope" aria-hidden="true"></i>
                 お問い合わせ
               </a>
             </li>
-            <li class="c-supportMenuItem">
-              <a href="" class="c-supportMenuLink">
+            <li class="c-supportMenu__item">
+              <a href="" class="c-supportMenu__link">
                 <i class="fas fa-globe" aria-hidden="true"></i>
                 English
               </a>
             </li>
           </ul>
-  
+
           <table class="c-fontMenu">
+            <!-- TODO:tableやめてulとbuttonで作り直し -->
             <tr>
               <th>文字サイズ</th>
               <td>小</td>
@@ -74,109 +75,113 @@
       </div>
       <!-- /.container -->
     </div>
-    <!-- head-conatiner end -->
-    <nav class="nav" id="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          企業情報<span class="ruby" lang="en">Company Profile</span>
-          <ul class="nav__subList">
-            <li class="nav__subListItem"><a href="">社長メッセージ</a></li>
-            <li class="nav__subListItem"><a href="">グループミッション</a></li>
-            <li class="nav__subListItem"><a href="">会社概要</a></li>
-            <li class="nav__subListItem"><a href="">沿革</a></li>
-            <li class="nav__subListItem"><a href="">グループ会社一覧</a></li>
-            <li class="nav__subListItem"><a href="">コーポレートガバナンス</a></li>
+    <!-- head-container end -->
+    <nav class="c-nav" id="nav">
+      <h2 class="screen-reader-text">サイト内メニュー</h2>
+      <ul class="c-nav__list">
+        <li class="c-nav__item">
+          企業情報<span class="english" lang="en">Company Profile</span>
+          <ul class="c-nav__subList">
+            <li class="c-nav__subListItem"><a href="">社長メッセージ</a></li>
+            <li class="c-nav__subListItem"><a href="">グループミッション</a></li>
+            <li class="c-nav__subListItem"><a href="">会社概要</a></li>
+            <li class="c-nav__subListItem"><a href="">沿革</a></li>
+            <li class="c-nav__subListItem"><a href="">グループ会社一覧</a></li>
+            <li class="c-nav__subListItem"><a href="">コーポレートガバナンス</a></li>
           </ul>
         </li>
-        <li class="nav__item">
-          IR情報<span class="ruby" lang="en">Investor Relations</span>
-          <ul class="nav__subList">
-            <li class="nav__subListItem"><a href="">決算短信</a></li>
-            <li class="nav__subListItem"><a href="">決算説明会</a></li>
-            <li class="nav__subListItem"><a href="">財務ハイライト</a></li>
-            <li class="nav__subListItem"><a href="">売上月次報告</a></li>
-            <li class="nav__subListItem"><a href="">年次報告書</a></li>
-            <li class="nav__subListItem"><a href="">会社案内</a></li>
-            <li class="nav__subListItem"><a href="">有価証券報告書</a></li>
-            <li class="nav__subListItem"><a href="">財務諸表</a></li>
+        <li class="c-nav__item">
+          IR情報<span class="english" lang="en">Investor Relations</span>
+          <ul class="c-nav__subList">
+            <li class="c-nav__subListItem"><a href="">決算短信</a></li>
+            <li class="c-nav__subListItem"><a href="">決算説明会</a></li>
+            <li class="c-nav__subListItem"><a href="">財務ハイライト</a></li>
+            <li class="c-nav__subListItem"><a href="">売上月次報告</a></li>
+            <li class="c-nav__subListItem"><a href="">年次報告書</a></li>
+            <li class="c-nav__subListItem"><a href="">会社案内</a></li>
+            <li class="c-nav__subListItem"><a href="">有価証券報告書</a></li>
+            <li class="c-nav__subListItem"><a href="">財務諸表</a></li>
           </ul>
         </li>
-        <li class="nav__item">
-          ニュースリリース<span class="ruby" lang="en">News Release</span>
+        <li class="c-nav__item">
+          <span>
+            <span class="c-nav__twoLines">ニュース</span>
+            <span class="c-nav__twoLines">リリース</span>
+          </span>
+          <span class="english" lang="en">News Release</span>
         </li>
-        <li class="nav__item">
-          株価情報<span class="ruby" lang="en">Stock Quotations</span>
+        <li class="c-nav__item">
+          株価情報<span class="english" lang="en">Stock Quotations</span>
         </li>
-        <li class="nav__item">
-          株主・投資家の皆様へ<span class="ruby" lang="en">For Sharefolders and Investors</span>
-          <ul class="nav__subList">
-            <li class="nav__subListItem"><a href="">株価情報</a></li>
-            <li class="nav__subListItem"><a href="">株主総会</a></li>
-            <li class="nav__subListItem"><a href="">株主優待・配当金</a></li>
-            <li class="nav__subListItem"><a href="">IRカレンダー</a></li>
+        <li class="c-nav__item">
+          株主の皆様へ<span class="english" lang="en">For Shareholders</span>
+          <ul class="c-nav__subList">
+            <li class="c-nav__subListItem"><a href="">株価情報</a></li>
+            <li class="c-nav__subListItem"><a href="">株主総会</a></li>
+            <li class="c-nav__subListItem"><a href="">株主優待・配当金</a></li>
+            <li class="c-nav__subListItem"><a href="">IRカレンダー</a></li>
           </ul>
         </li>
-        <li class="nav__item">
-          ESG活動<span class="ruby" lang="en">Environment Society Governance</span>
-          <ul class="nav__subList">
-            <li class="nav__subListItem"><a href="#">環境保護活動</a></li>
-            <li class="nav__subListItem"><a href="#">社会貢献活動</a></li>
-            <li class="nav__subListItem"><a href="#">募金活動</a></li>
-            <li class="nav__subListItem"><a href="#">震災復興支援</a></li>
-            <li class="nav__subListItem"><a href="#">支援活動</a></li>
-            <li class="nav__subListItem"><a href="#">災害時支援</a></li>
-            <li class="nav__subListItem"><a href="#">地域との連携</a></li>
-            <li class="nav__subListItem"><a href="#">研修制度</a></li>
+        <li class="c-nav__item">
+          ESG活動<span class="english" lang="en">Environment Society Governance</span>
+          <ul class="c-nav__subList">
+            <li class="c-nav__subListItem"><a href="#">環境保護活動</a></li>
+            <li class="c-nav__subListItem"><a href="#">社会貢献活動</a></li>
+            <li class="c-nav__subListItem"><a href="#">募金活動</a></li>
+            <li class="c-nav__subListItem"><a href="#">震災復興支援</a></li>
+            <li class="c-nav__subListItem"><a href="#">支援活動</a></li>
+            <li class="c-nav__subListItem"><a href="#">災害時支援</a></li>
+            <li class="c-nav__subListItem"><a href="#">地域との連携</a></li>
+            <li class="c-nav__subListItem"><a href="#">研修制度</a></li>
           </ul>
         </li>
       </ul>
-      <i class="fas fa-times-circle fa-4x nav__close" id="close"></i>
+      <i class="fas fa-times-circle fa-4x c-nav__close" id="close"></i>
     </nav>
   </header>
 
   <!-- <div class="l-background-pattern" aria-hidden="true"></div> -->
   <main class="l-main l-container">
-    <div class="hero">
+    <div class="p-hero">
       <img src="./img/top-image1.jpg" alt="ここに画像代替コメントが入ります" id="slide" />
     </div>
     <!-- top-image end -->
 
     <div class="l-gridContainer">
-      <section class="news c-sectionBase">
-        <div class="news__header c-sectionHeading">
-          <h2>お知らせ<span class="ruby" lang="en">News</span></h2>
-          <div class="c-sectionHeading__link">一覧はこちら</div>
+      <section class="p-news c-sectionBase">
+        <div class="p-news__header c-sectionHeading">
+          <h2>お知らせ<span class="english" lang="en">News</span></h2>
         </div>
-        <ul class="news__list">
-          <li class="news__item">
+        <ul class="p-news__list">
+          <li class="p-news__item">
             <time datetime="2019-11-18">2019.11.18</time>
             <div class="c-tag -blue">Info</div>
             <p>
                 当サイトは<a href="https://or-ikeda.net">ORイケダ事務所</a>による制作サンプルサイトです。「お知らせ」欄を除く全ての内容は架空のものとなっております。
               </p>
           </li>
-          <li class="news__item">
+          <li class="p-news__item">
             <time datetime="2019-12-02">2019.12.02</time>
             <div class="c-tag -green">Code</div>
             <p>
                 レスポンシブデザインへの対応を完了しました。PC、タブレット、スマートフォンそれぞれに最適化しています。ブレークポイントは、960pxと560pxで設計いたしました。
               </p>
           </li>
-          <li class="news__item">
+          <li class="p-news__item">
             <time datetime="2019-11-18">2019.11.18</time>
             <div class="c-tag -pink">Note</div>
             <p>
                 グローバルナビゲーション部分（ページ上部の「企業情報」などが表示されているパート）のドロップダウンメニュー化を完了しました。これにより、サブメニューが表示されるようになっております。実装には、jQueryのプラグインなどは使用せず、CSSのみで記述いたしました。
               </p>
           </li>
-          <li class="news__item">
+          <li class="p-news__item">
             <time datetime="2019-11-17">2019.11.17</time>
             <div class="c-tag -green">Code</div>
             <p>
                 メインビジュアルにスライドショーを実装しました。プラグインは使用せず、シンプルなJavaScriptで記述しております。
               </p>
           </li>
-          <li class="news__item">
+          <li class="p-news__item">
             <time datetime="2019-11-16">2019.11.16</time>
             <div class="c-tag -green">Code</div>
             <p>
@@ -185,7 +190,7 @@
                 Explorer」で閲覧した場合、レイアウトの崩れが生じるなど、快適なブラウジングが出来ない場合があります。
               </p>
           </li>
-          <li class="news__item">
+          <li class="p-news__item">
             <time datetime="2019-11-16">2019.11.16</time>
             <div class="c-tag -pink">Note</div>
             <p>
@@ -194,7 +199,10 @@
               </p>
           </li>
         </ul>
+        <a href="" class="c-sectionHeading__more">一覧はこちら</a>
       </section>
+      <!-- / section.p-news -->
+
       <div class="info-block">
         <section class="message c-sectionBase">
           <div class="message-head-container main__info-button">
@@ -205,7 +213,7 @@
             <div class="message-lead">
               <p>
                   親譲りの無鉄砲で小供の時から損ばかりしている。
-                  <span class="ruby" lang="en"><br />I'm always damaged by my lack of thought.
+                  <span class="english" lang="en"><br />I'm always damaged by my lack of thought.
                   </span>
                 </p>
             </div>
@@ -216,10 +224,10 @@
             <img src="./img/ceo.jpg" alt="CEOの写真" />
           </div>
         </section>
-        <section class="ir c-sectionBase">
-          <div class="ir-header c-sectionHeading main__info-button">
-            <h2>IR最新情報<span class="ruby" lang="en">Investor Relations</span></h2>
-            <div class="c-sectionHeading__link">IR情報一覧</div>
+        <section class="ir c-box c-sectionBase">
+          <div class="ir-header c-sectionHeading">
+            <h2>IR情報<span class="english" lang="en">Investor Relations</span></h2>
+            <div class="c-sectionHeading__more">IR情報一覧</div>
           </div>
           <!-- ir-header end -->
           <div class="ir-body">
@@ -235,13 +243,13 @@
               </div>
             </div>
             <!-- ir-body-upper end -->
-            <div class="ir-body-lower l-body-lower">
-              <ul class="ir-body-lower-index l-body-lower-index">
+            <div class="ir-body-lower c-box__links">
+              <ul class="ir-body-lower-index c-box__linksColumn">
                 <li><a href="">決算短信</a></li>
                 <li><a href="">決算説明会</a></li>
                 <li><a href="">財務ハイライト</a></li>
               </ul>
-              <ul class="ir-body-lower-index l-body-lower-index">
+              <ul class="ir-body-lower-index c-box__linksColumn">
                 <li><a href="">売上月次報告</a></li>
                 <li><a href="">有価証券報告書</a></li>
                 <li><a href="">財務諸表</a></li>
@@ -259,22 +267,23 @@
     </div>
     <!-- main__upper-container end -->
 
-    <div class="l-gridContainer links-block">
-      <section class="c-sectionBase">
+    <div class="l-gridContainer linksBlock">
+      <section class="c-box c-sectionBase">
         <div class="c-sectionHeading">
-          <h2>会社情報<span class="ruby" lang="en">Company Profile</span></h2>
+          <h2>会社情報<span class="english" lang="en">Company Profile</span></h2>
         </div>
         <!-- company-profile-header end -->
-        <img src="./img/company.jpg" alt="" class="links-block__section-image" />
-        <div class="links-block__section-body l-body-lower">
-          <ul class="links-block__section-body__index l-body-lower-index">
+
+        <img src="./img/company.jpg" alt="" class="c-box__image" />
+        <div class="c-box__links">
+          <ul class="c-box__linksColumn">
             <li><a href="">社長メッセージ</a></li>
             <li><a href="">グループミッション</a></li>
             <li><a href="">中期経営計画</a></li>
             <li><a href="">会社概要</a></li>
             <li><a href="">沿革</a></li>
           </ul>
-          <ul class="links-block__section-body__index l-body-lower-index">
+          <ul class="c-box__linksColumn">
             <li><a href="">組織図</a></li>
             <li><a href="">事業拠点</a></li>
             <li><a href="">本社地図</a></li>
@@ -283,22 +292,23 @@
           </ul>
         </div>
       </section>
-      <section class="c-sectionBase">
+
+      <section class="c-box c-sectionBase">
         <div class="c-sectionHeading">
           <h2>
-              株主・投資家の皆様へ<span class="ruby" lang="en">For Sharefolders and Investors</span>
+              株主の皆様へ<span class="english" lang="en">For Shareholders</span>
             </h2>
         </div>
         <!-- company-profile-header end -->
-        <img src="./img/investor.jpg" alt="" class="links-block__section-image" />
-        <div class="links-block__section-body l-body-lower">
-          <ul class="links-block__section-body__index l-body-lower-index">
+        <img src="./img/investor.jpg" alt="" class="c-box__image" />
+        <div class="c-box__links">
+          <ul class="c-box__linksColumn">
             <li><a href="">株価情報</a></li>
             <li><a href="">株主総会</a></li>
             <li><a href="">株主優待</a></li>
             <li><a href="">IRカレンダー</a></li>
           </ul>
-          <ul class="links-block__section-body__index l-body-lower-index">
+          <ul class="c-box__linksColumn">
             <li><a href="">財務・業績ハイライト</a></li>
             <li><a href="">統合報告書</a></li>
             <li><a href="">電子公告・定款</a></li>
@@ -306,22 +316,23 @@
           </ul>
         </div>
       </section>
-      <section class="c-sectionBase">
+
+      <section class="c-box c-sectionBase">
         <div class="c-sectionHeading">
           <h2>
-              ESG活動<span class="ruby" lang="en">Environment Society Governance</span>
+              ESG活動<span class="english u-nbr" lang="en">Environment Society Governance</span>
             </h2>
         </div>
         <!-- company-profile-header end -->
-        <img src="./img/social.jpg" alt="" class="links-block__section-image" />
-        <div class="links-block__section-body l-body-lower">
-          <ul class="links-block__section-body__index l-body-lower-index">
+        <img src="./img/social.jpg" alt="" class="c-box__image" />
+        <div class="c-box__links">
+          <ul class="c-box__linksColumn">
             <li><a href="">社会貢献活動</a></li>
             <li><a href="">環境保護活動</a></li>
             <li><a href="">地域貢献活動</a></li>
             <li><a href="">募金活動</a></li>
           </ul>
-          <ul class="links-block__section-body__index l-body-lower-index">
+          <ul class="c-box__linksColumn">
             <li><a href="">東日本大震災復興支援</a></li>
             <li><a href="">産業廃棄物削減</a></li>
             <li><a href="">ISO26000</a></li>
@@ -330,7 +341,7 @@
         </div>
       </section>
     </div>
-    <!-- main__lower-container end -->
+    <!-- /.linksBlock -->
   </main>
   <!-- main-wrapper end -->
   <div class="second-nav c-sectionHeading">
@@ -352,7 +363,7 @@
       <section class="guide__banner-area">
         <h2>グループ会社Webサイト</h2>
         <div class="guide__banner-deck">
-          <img src="./img/banner1.jpg" alt="banner helloween" class="guide__banner" />
+          <img src="./img/banner1.jpg" alt="banner halloween" class="guide__banner" />
           <img src="./img/banner2.jpg" alt="banner 2020" class="guide__banner" />
           <img src="./img/banner3.jpg" alt="banner christmas" class="guide__banner" />
           <img src="./img/banner4.jpg" alt="banner pizza" class="guide__banner" />
@@ -389,7 +400,7 @@
           </ul>
         </section>
         <section class="guide__index">
-          <h3 class="guide__index-heading">株主・投資家の皆様へ</h3>
+          <h3 class="guide__index-heading">株主の皆様へ</h3>
           <ul class="guide__index-body">
             <li><a href="">株価情報</a></li>
             <li><a href="">株主総会</a></li>
