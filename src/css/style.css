@@ -261,7 +261,7 @@ body {
   font-size: 0.8125em;
 }
 
-.c-box__linksColumn li {
+.c-box__linksItem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,15 +271,15 @@ body {
           align-items: center;
 }
 
-.c-box__linksColumn li a {
+.c-box__linksItem a {
   margin-left: 4px;
 }
 
-.c-box__linksColumn li a:hover {
+.c-box__linksItem a:hover {
   opacity: 0.7;
 }
 
-.c-box__linksColumn li:before {
+.c-box__linksItem:before {
   color: #039;
   content: "\f0da";
   font-weight: 900;
@@ -1242,7 +1242,7 @@ body {
   content: "\f152";
 }
 
-footer {
+.address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

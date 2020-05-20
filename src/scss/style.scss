@@ -224,22 +224,22 @@ body {
 .c-box__linksColumn {
   list-style: none;
   font-size: 0.8125em;
-  li {
-    display: flex;
-    height: 2.5em;
-    align-items: center;
-    a {
-      margin-left: 4px;
-      &:hover {
-        opacity: 0.7;
-      }
+}
+.c-box__linksItem {
+  display: flex;
+  height: 2.5em;
+  align-items: center;
+  a {
+    margin-left: 4px;
+    &:hover {
+      opacity: 0.7;
     }
-    &:before {
-      color: $key-color;
-      content: "\f0da";
-      font-weight: 900;
-      font-family: "Font Awesome 5 Free";
-    }
+  }
+  &:before {
+    color: $key-color;
+    content: "\f0da";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
   }
 }
 @media screen and (max-width: 959px) {
@@ -1093,13 +1093,12 @@ body {
   content: "\f152";
 }
 
-footer {
+.address {
   display: flex;
   height: 3.75em;
   background: #c4c4c4;
   color: $main-color;
   font-size: 1em;
-
   align-items: center;
   justify-content: center;
 }
