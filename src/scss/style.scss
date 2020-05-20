@@ -168,6 +168,7 @@ body {
   h2 {
     font-weight: normal;
     font-size: 0.875em;
+    margin: 0;
     .english {
       margin-left: 6px;
     }
@@ -225,7 +226,7 @@ body {
   font-size: 0.8125em;
   li {
     display: flex;
-    height: 28px;
+    height: 2.5em;
     align-items: center;
     a {
       margin-left: 4px;
@@ -317,7 +318,7 @@ body {
 .p-news__list {
   overflow-y: scroll;
   padding: 15px;
-  height: 472px;
+  height: 30em;
   time {
     min-width: 80px;
     align-self: center;
@@ -660,7 +661,8 @@ body {
 
 .ir-body-upper {
   display: flex;
-  height: 148px;
+  // height: 148px;
+  height: 9.25em;
   border-bottom: solid 1px $border-color;
 
   justify-content: space-around;
@@ -684,7 +686,8 @@ body {
 
 .ir-body-upper-left img,
 .ir-body-upper-right img {
-  height: 108px;
+  // height: 108px;
+  height: 7.75em;
 }
 
 @media screen and (max-width: 959px) {
@@ -692,7 +695,6 @@ body {
     margin: 1em 1em 0 0;
     min-width: 320px;
     height: 100px;
-
     flex: 3 3 auto;
   }
 
@@ -719,14 +721,12 @@ body {
     display: flex;
     height: 100%;
     border: none;
-
     justify-content: space-around;
   }
 
   .ir-body-upper div {
     display: flex;
     font-size: 1.125em;
-
     flex: 1 1 auto;
   }
 
@@ -1065,7 +1065,7 @@ body {
 
 .guide__index-body li {
   margin-left: 1em;
-  height: 28px;
+  height: 2.5em;
   font-size: 0.8125em;
 }
 
