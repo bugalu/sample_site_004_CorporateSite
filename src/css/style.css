@@ -170,14 +170,14 @@ body {
 
 /*** Section Heading ***/
 .c-sectionHeading {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.5em;
+  padding: 1em 0.5em;
   border-top: 3px solid #039;
   background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), color-stop(65%, #fafafa), to(#eee));
   background: linear-gradient(#fafafa 0%, #fafafa 65%, #eee 100%);
+  line-height: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -197,7 +197,7 @@ body {
 
 .c-sectionHeading__more {
   position: absolute;
-  top: 1em;
+  top: 1.5em;
   right: 1em;
   font-size: 0.687em;
   cursor: pointer;
@@ -790,11 +790,7 @@ body {
 }
 
 .ir {
-  height: 280px;
-}
-
-.ir-header {
-  height: 40px;
+  position: relative;
 }
 
 .ir-body-upper {
@@ -844,7 +840,7 @@ body {
             flex: 3 3 auto;
   }
   .ir .english,
-  .ir .c-sectionHeading__link,
+  .ir .c-sectionHeading__more,
   .ir img,
   .ir-body-lower {
     display: none;
@@ -940,10 +936,6 @@ body {
 
 .linksBlock section {
   width: 310px;
-}
-
-.linksBlock section .c-sectionHeading {
-  height: 40px;
 }
 
 .c-box__image {
