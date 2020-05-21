@@ -682,11 +682,7 @@ body {
   }
 }
 
-.transparent {
-  opacity: 0;
-}
-
-.info-block {
+.p-infoBlock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -704,7 +700,7 @@ body {
 }
 
 @media screen and (max-width: 959px) {
-  .info-block {
+  .p-infoBlock {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

@@ -421,7 +421,6 @@ body {
   max-width: 960px;
   width: 100%;
   height: 4em;
-  // max-height: 56px;
 }
 .c-nav__list {
   display: flex;
@@ -439,7 +438,6 @@ body {
   text-align: center;
   font-size: 0.875em;
   cursor: pointer;
-  // flex: 0 1 156px;
   width: calc(16.66667% - 4px);
   justify-content: flex-start;
   &:hover {
@@ -456,7 +454,6 @@ body {
   line-height: 1;
   margin-bottom: 0.25em;
 }
-
 .c-nav__subList {
   z-index: 1;
   display: flex;
@@ -469,7 +466,6 @@ body {
   width: 10em;
   min-width: 100%;
 }
-
 .c-nav__subListItem {
   display: flex;
   flex-direction: column;
@@ -489,11 +485,9 @@ body {
     font-size: 0.75em;
   }
 }
-
 .c-nav__close {
   display: none;
 }
-
 @media screen and (max-width: 959px) {
   .c-nav {
     position: fixed;
@@ -543,7 +537,6 @@ body {
   overflow-x: hidden;
   margin: 1em auto 0;
 }
-
 @media screen and (max-width: 959px) {
   .l-main {
     top: 0;
@@ -551,21 +544,15 @@ body {
   }
 }
 
-.transparent {
-  opacity: 0;
-}
-
-.info-block {
+.p-infoBlock {
   display: flex;
   flex-direction: column;
   margin-left: 12px;
-
   flex: 0 1 310px;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 959px) {
-  .info-block {
+  .p-infoBlock {
     flex-direction: row;
     margin: 0;
     padding-left: 1em;
