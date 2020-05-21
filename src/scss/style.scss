@@ -363,6 +363,40 @@ body {
   }
 }
 
+/*** return nav ***/
+.p-returnNav__outer {
+  margin-top: 1em;
+  height: 40px;
+}
+
+.p-returnNav {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.p-returnNav__list {
+  display: flex;
+  width: 960px;
+  list-style: none;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.p-returnNav__item {
+  font-size: 0.8125em;
+}
+
+.p-returnNav__icon {
+  margin-right: 4px;
+  color: $key-color;
+}
+
+@media screen and (max-width: 959px) {
+  .p-returnNav__outer {
+    display: none;
+  }
+}
+
 /* ======================================================
    Utility
    ====================================================== */
@@ -876,40 +910,7 @@ body {
   }
 }
 
-.returnNav__outer {
-  margin-top: 1em;
-  height: 40px;
-}
-
-.returnNav {
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-.returnNav__list {
-  display: flex;
-  width: 960px;
-  list-style: none;
-  text-align: center;
-  justify-content: space-between;
-}
-
-.returnNav__item {
-  font-size: 0.8125em;
-}
-
-.returnNav__icon {
-  margin-right: 4px;
-  color: $key-color;
-}
-
-@media screen and (max-width: 959px) {
-  .returnNav__outer {
-    display: none;
-  }
-}
-
-.links__wrapper {
+.p-links__wrapper {
   margin-top: -16px;
   width: 100%;
   // background: $main-color;
@@ -919,12 +920,12 @@ body {
 }
 
 @media screen and (max-width: 959px) {
-  .links__wrapper {
+  .p-links__wrapper {
     position: relative;
   }
 }
 
-.links__container {
+.p-links__container {
   margin: auto;
   max-width: 960px;
 }
