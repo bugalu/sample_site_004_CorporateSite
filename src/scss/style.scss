@@ -36,15 +36,25 @@ body {
   margin: 0 auto;
 }
 
-.l-header-container {
-  width: 100%;
-  background: repeating-linear-gradient(90deg, transparent 0px, transparent 9px, #eee 9px, #eee 10px),
-    repeating-linear-gradient(#e6e6e6 0px, #dfdfdf 9px, #eee 9px, #eee 10px);
+/* Main
+   ------------------------------------------------------ */
+.l-main {
+  position: relative;
+  right: 0;
+  left: 0;
+  overflow-x: hidden;
+  margin: 1em auto 0;
+}
+@media screen and (max-width: 959px) {
+  .l-main {
+    top: 0;
+    overflow: visible;
+  }
 }
 
 /* Grid
 ------------------------------------------------------ */
-.l-header-container .l-container {
+.l-headerContainer .l-container {
   overflow: hidden;
 }
 .l-siteTitle {
@@ -151,6 +161,123 @@ body {
     cursor: pointer;
     &:hover {
       background-color: $key-color + #1a1a1a;
+    }
+  }
+}
+
+/*** Navigation ***/
+.c-nav {
+  clear: both;
+  display: flex;
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  height: 4em;
+}
+.c-nav__list {
+  display: flex;
+  width: 100%;
+  background: $main-color;
+  list-style: none;
+  justify-content: space-around;
+}
+.c-nav__item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  background: linear-gradient($main-color 0, $main-color 25%, #eee 100%);
+  box-shadow: 0 1px 1px 0 #e0e0e0;
+  text-align: center;
+  font-size: 0.875em;
+  cursor: pointer;
+  width: calc(16.66667% - 4px);
+  justify-content: flex-start;
+  &:hover {
+    background: linear-gradient(#eee 0, #eee 25%, $main-color 100%);
+    & .c-nav__subList {
+      visibility: visible;
+      opacity: 1;
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
+.c-nav__twoLines {
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 0.25em;
+}
+.c-nav__subList {
+  z-index: 1;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  margin-top: 14px;
+  opacity: 0;
+  transition: 0.2s ease-in;
+  justify-content: flex-start;
+  width: 10em;
+  min-width: 100%;
+}
+.c-nav__subListItem {
+  display: flex;
+  flex-direction: column;
+  height: 36px;
+  border-bottom: solid 1px $border-color;
+  background: $main-color;
+  justify-content: center;
+  &:hover {
+    background: $key-color;
+    a {
+      color: $main-color;
+    }
+  }
+  a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.75em;
+  }
+}
+.c-nav__close {
+  display: none;
+}
+@media screen and (max-width: 959px) {
+  .c-nav {
+    position: fixed;
+    z-index: 1;
+    height: auto;
+    box-shadow: 5px 5px 5px 0 #333;
+    opacity: 0.9;
+    transition: 0.5s;
+  }
+  .c-nav__list {
+    display: flex;
+    flex-direction: column;
+    height: 18.75em;
+  }
+  .c-nav__item {
+    padding-top: 0;
+    height: 4.44444em;
+    border-bottom: 1px solid #aaa;
+    background: #ddd;
+    font-size: 1.125em;
+    line-height: 4.44444em;
+    cursor: pointer;
+  }
+  .c-nav__subList,
+  .c-nav__list .english {
+    display: none;
+  }
+  .c-nav__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    color: $key-color;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      color: #333;
+      opacity: 0.7;
     }
   }
 }
@@ -279,9 +406,12 @@ body {
    ------------------------------------------------------ */
 /*** Header ***/
 .p-header {
-  // display: flex;
-  // flex-direction: column;
   background: linear-gradient($main-color 0%, $main-color 65%, #eee);
+}
+.p-headerContainer {
+  width: 100%;
+  background: repeating-linear-gradient(90deg, transparent 0px, transparent 9px, #eee 9px, #eee 10px),
+    repeating-linear-gradient(#e6e6e6 0px, #dfdfdf 9px, #eee 9px, #eee 10px);
 }
 
 /*** User Support Menus ***/
@@ -363,17 +493,33 @@ body {
   }
 }
 
+/*** Info Block  ***/
+.p-infoBlock {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  flex: 0 1 310px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 959px) {
+  .p-infoBlock {
+    flex-direction: row;
+    margin: 0;
+    padding-left: 1em;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 /*** return nav ***/
 .p-returnNav__outer {
   margin-top: 1em;
   height: 40px;
 }
-
 .p-returnNav {
   margin: 0 auto;
   max-width: 960px;
 }
-
 .p-returnNav__list {
   display: flex;
   width: 960px;
@@ -381,16 +527,13 @@ body {
   text-align: center;
   justify-content: space-between;
 }
-
 .p-returnNav__item {
   font-size: 0.8125em;
 }
-
 .p-returnNav__icon {
   margin-right: 4px;
   color: $key-color;
 }
-
 @media screen and (max-width: 959px) {
   .p-returnNav__outer {
     display: none;
@@ -413,154 +556,6 @@ body {
 /*********************** ↑ チェック済 ↑ *************************/
 /*************************** 再ネスト *****************************/
 /*********************** ↓ 未チェック ↓ *************************/
-
-.c-nav {
-  clear: both;
-  display: flex;
-  margin: 0 auto;
-  max-width: 960px;
-  width: 100%;
-  height: 4em;
-}
-.c-nav__list {
-  display: flex;
-  width: 100%;
-  background: $main-color;
-  list-style: none;
-  justify-content: space-around;
-}
-.c-nav__item {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1em;
-  background: linear-gradient($main-color 0, $main-color 25%, #eee 100%);
-  box-shadow: 0 1px 1px 0 #e0e0e0;
-  text-align: center;
-  font-size: 0.875em;
-  cursor: pointer;
-  width: calc(16.66667% - 4px);
-  justify-content: flex-start;
-  &:hover {
-    background: linear-gradient(#eee 0, #eee 25%, $main-color 100%);
-    & > .c-nav__subList {
-      visibility: visible;
-      opacity: 1;
-      transition: 0.2s ease-in-out;
-    }
-  }
-}
-.c-nav__twoLines {
-  display: inline-block;
-  line-height: 1;
-  margin-bottom: 0.25em;
-}
-.c-nav__subList {
-  z-index: 1;
-  display: flex;
-  visibility: hidden;
-  flex-direction: column;
-  margin-top: 14px;
-  opacity: 0;
-  transition: 0.2s ease-in;
-  justify-content: flex-start;
-  width: 10em;
-  min-width: 100%;
-}
-.c-nav__subListItem {
-  display: flex;
-  flex-direction: column;
-  height: 36px;
-  border-bottom: solid 1px $border-color;
-  background: $main-color;
-  justify-content: center;
-  &:hover {
-    background: $key-color;
-    a {
-      color: $main-color;
-    }
-  }
-  a {
-    color: #333;
-    text-decoration: none;
-    font-size: 0.75em;
-  }
-}
-.c-nav__close {
-  display: none;
-}
-@media screen and (max-width: 959px) {
-  .c-nav {
-    position: fixed;
-    z-index: 1;
-    height: auto;
-    box-shadow: 5px 5px 5px 0 #333;
-    opacity: 0.9;
-    transition: 0.5s;
-  }
-  .c-nav__list {
-    display: flex;
-    flex-direction: column;
-    height: 18.75em;
-  }
-  .c-nav__item {
-    padding-top: 0;
-    height: 4.44444em;
-    border-bottom: 1px solid #aaa;
-    background: #ddd;
-    font-size: 1.125em;
-    line-height: 4.44444em;
-    cursor: pointer;
-  }
-  .c-nav__subList,
-  .c-nav__list .english {
-    display: none;
-  }
-  .c-nav__close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: block;
-    color: $key-color;
-    cursor: pointer;
-    transition: 0.5s;
-    &:hover {
-      color: #333;
-      opacity: 0.7;
-    }
-  }
-}
-
-.l-main {
-  position: relative;
-  right: 0;
-  left: 0;
-  overflow-x: hidden;
-  margin: 1em auto 0;
-}
-@media screen and (max-width: 959px) {
-  .l-main {
-    top: 0;
-    overflow: visible;
-  }
-}
-
-.p-infoBlock {
-  display: flex;
-  flex-direction: column;
-  margin-left: 12px;
-  flex: 0 1 310px;
-  justify-content: space-between;
-}
-@media screen and (max-width: 959px) {
-  .p-infoBlock {
-    flex-direction: row;
-    margin: 0;
-    padding-left: 1em;
-
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
 
 .message {
   display: flex;
