@@ -876,35 +876,35 @@ body {
   }
 }
 
-.second-nav {
+.footerNav {
   margin-top: 1em;
   height: 40px;
 }
 
-.second-nav__nav-area {
+.footerNav__nav-area {
   margin: 0 auto;
   max-width: 960px;
 }
 
-.second-nav__nav-area ul {
+.footerNav__nav-area ul {
   display: flex;
   width: 960px;
   list-style: none;
-
+  text-align: center;
   justify-content: space-between;
 }
 
-.second-nav__nav-area ul li {
+.footerNav__nav-area ul li {
   font-size: 0.8125em;
 }
 
-.second-nav__nav-area ul li i {
+.footerNav__nav-area ul li i {
   margin-right: 4px;
   color: $key-color;
 }
 
 @media screen and (max-width: 959px) {
-  .second-nav {
+  .footerNav {
     display: none;
   }
 }
