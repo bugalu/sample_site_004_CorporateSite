@@ -909,10 +909,6 @@ body {
   }
 }
 
-.links {
-  margin-top: 6px;
-}
-
 .links__wrapper {
   margin-top: -16px;
   width: 100%;
@@ -933,7 +929,7 @@ body {
   max-width: 960px;
 }
 
-/*** p-banners ***/
+/*** Footer Banners ***/
 .p-banners {
   margin-top: 16px;
   padding-top: 16px;
@@ -975,6 +971,7 @@ body {
   }
 }
 
+/*** Footer Links ***/
 .p-footerLinks {
   display: flex;
   margin-top: 24px;
@@ -1117,7 +1114,7 @@ body {
   letter-spacing: -2px;
   font-size: 0.75em;
 }
-.u-nbr {
+.u-noWrap {
   white-space: nowrap;
 }
 
