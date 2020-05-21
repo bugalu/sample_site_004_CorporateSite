@@ -1083,22 +1083,23 @@ body {
   max-width: 960px;
 }
 
-.links__banner-area {
+/*** p-banners ***/
+.p-banners {
   margin-top: 16px;
   padding-top: 16px;
 }
 
-.links__banner-area h2 {
+.p-banners__heading {
   position: relative;
   font-weight: normal;
   font-size: 0.8125em;
 }
 
-.links__banner-area h2:after {
+.p-banners__heading:after {
   position: absolute;
   top: 50%;
   right: 0;
-  left: 128px;
+  left: 12em;
   display: inline-block;
   height: 1px;
   background: #bbb;
@@ -1106,12 +1107,12 @@ body {
 }
 
 @media screen and (max-width: 959px) {
-  .links__banner-area h2 {
+  .p-banners__heading {
     display: none;
   }
 }
 
-.links__banner-deck {
+.p-banners__grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1123,12 +1124,12 @@ body {
           justify-content: center;
 }
 
-.links__banner {
+.p-banners_img {
   margin: 8px;
   cursor: pointer;
 }
 
-.links__banner:hover {
+.p-banners_img:hover {
   opacity: 0.7;
 }
 
