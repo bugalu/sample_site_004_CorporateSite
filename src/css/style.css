@@ -1061,11 +1061,11 @@ body {
   }
 }
 
-.guide {
+.links {
   margin-top: 6px;
 }
 
-.guide__wrapper {
+.links__wrapper {
   margin-top: -16px;
   width: 100%;
   background: repeating-linear-gradient(45deg, transparent 0, transparent 3px, #fafafa 3px, #fafafa 4px), repeating-linear-gradient(-45deg, #efefef 0, #efefef 3px, #fafafa 3px, #fafafa 4px);
@@ -1073,28 +1073,28 @@ body {
 }
 
 @media screen and (max-width: 959px) {
-  .guide__wrapper {
+  .links__wrapper {
     position: relative;
   }
 }
 
-.guide__container {
+.links__container {
   margin: auto;
   max-width: 960px;
 }
 
-.guide__banner-area {
+.links__banner-area {
   margin-top: 16px;
   padding-top: 16px;
 }
 
-.guide__banner-area h2 {
+.links__banner-area h2 {
   position: relative;
   font-weight: normal;
   font-size: 0.8125em;
 }
 
-.guide__banner-area h2:after {
+.links__banner-area h2:after {
   position: absolute;
   top: 50%;
   right: 0;
@@ -1106,12 +1106,12 @@ body {
 }
 
 @media screen and (max-width: 959px) {
-  .guide__banner-area h2 {
+  .links__banner-area h2 {
     display: none;
   }
 }
 
-.guide__banner-deck {
+.links__banner-deck {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1123,16 +1123,16 @@ body {
           justify-content: center;
 }
 
-.guide__banner {
+.links__banner {
   margin: 8px;
   cursor: pointer;
 }
 
-.guide__banner:hover {
+.links__banner:hover {
   opacity: 0.7;
 }
 
-.guide__index-container {
+.links__index-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1144,16 +1144,16 @@ body {
 }
 
 @media screen and (max-width: 959px) {
-  .guide__index-container {
+  .links__index-container {
     padding-bottom: 0;
   }
-  .guide__index-container section {
+  .links__index-container section {
     display: none;
   }
-  .guide__index-container div.guide__index {
+  .links__index-container div.links__index {
     width: 100%;
   }
-  .guide__index-container div.guide__index ul {
+  .links__index-container div.links__index ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1161,7 +1161,7 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .guide__index-container div.guide__index ul li {
+  .links__index-container div.links__index ul li {
     margin-left: 0;
     width: 50%;
     height: 2.5em;
@@ -1169,13 +1169,13 @@ body {
     text-align: center;
     cursor: pointer;
   }
-  .guide__index-container div.guide__index ul li:nth-of-type(-n + 4) {
+  .links__index-container div.links__index ul li:nth-of-type(-n + 4) {
     border-right: 1px solid #fafafa;
   }
-  .guide__index-container div.guide__index ul li:hover {
+  .links__index-container div.links__index ul li:hover {
     background: #d0d0d0;
   }
-  .guide__index-container div.guide__index ul li a {
+  .links__index-container div.links__index ul li a {
     color: #333;
     text-decoration: none;
     font-size: 1em;
@@ -1184,24 +1184,24 @@ body {
 }
 
 @media screen and (max-width: 559px) {
-  .guide__index-container div.guide__index ul {
+  .links__index-container div.links__index ul {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  .guide__index-container div.guide__index ul li {
+  .links__index-container div.links__index ul li {
     width: 50%;
   }
-  .guide__index-container div.guide__index ul li:nth-of-type(-n + 4) {
+  .links__index-container div.links__index ul li:nth-of-type(-n + 4) {
     border-right: none;
   }
 }
 
-.guide__index-heading {
+.links__index-heading {
   font-weight: normal;
   font-size: 0.8125em;
 }
 
-.guide__index-heading:before {
+.links__index-heading:before {
   margin-right: 6px;
   color: #039;
   content: "\f152";
@@ -1209,36 +1209,36 @@ body {
   font-family: "Font Awesome 5 Free";
 }
 
-.guide__index-body {
+.links__index-body {
   list-style: none;
 }
 
-.guide__index-body li {
+.links__index-body li {
   margin-left: 1em;
   height: 2.5em;
   font-size: 0.8125em;
 }
 
-.guide__index-body li a {
+.links__index-body li a {
   margin-left: 4px;
 }
 
-.guide__index-body li a:hover {
+.links__index-body li a:hover {
   opacity: 0.7;
 }
 
-.guide__index-body li:before {
+.links__index-body li:before {
   color: #039;
   content: "\f0da";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
 }
 
-.guide__index-body.p-news {
+.links__index-body.p-news {
   margin-top: 0;
 }
 
-.guide__index-body.p-news li:before {
+.links__index-body.p-news li:before {
   margin-right: 4px;
   content: "\f152";
 }
