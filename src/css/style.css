@@ -1024,17 +1024,17 @@ body {
   }
 }
 
-.footerNav {
+.returnNav__outer {
   margin-top: 1em;
   height: 40px;
 }
 
-.footerNav__nav-area {
+.returnNav {
   margin: 0 auto;
   max-width: 960px;
 }
 
-.footerNav__nav-area ul {
+.returnNav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1046,17 +1046,17 @@ body {
           justify-content: space-between;
 }
 
-.footerNav__nav-area ul li {
+.returnNav__item {
   font-size: 0.8125em;
 }
 
-.footerNav__nav-area ul li i {
+.returnNav__icon {
   margin-right: 4px;
   color: #039;
 }
 
 @media screen and (max-width: 959px) {
-  .footerNav {
+  .returnNav__outer {
     display: none;
   }
 }
