@@ -498,8 +498,8 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 12px;
-  flex: 0 1 310px;
   justify-content: space-between;
+  width: 310px;
 }
 @media screen and (max-width: 959px) {
   .p-infoBlock {
@@ -561,7 +561,7 @@ body {
   display: flex;
   max-width: 100%;
 }
-.p-messageHeadContainer {
+.p-message__headContainer {
   // display: flex;
   // flex-direction: column;
   // justify-content: flex-start;
@@ -613,7 +613,7 @@ body {
     cursor: pointer;
     flex: 4 4 auto;
   }
-  .p-messageHeadContainer {
+  .p-message__headContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -636,7 +636,7 @@ body {
     min-width: 320px;
     height: 3.75em;
   }
-  .p-messageHeadContainer h2 {
+  .p-message__headContainer h2 {
     font-size: 1.5em;
   }
   .p-message img,

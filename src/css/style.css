@@ -641,12 +641,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 12px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 310px;
-          flex: 0 1 310px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 310px;
 }
 
 @media screen and (max-width: 959px) {
@@ -725,7 +723,7 @@ body {
   max-width: 100%;
 }
 
-.p-messageHeadContainer {
+.p-message__headContainer {
   min-width: 180px;
   border-right: solid 1px #d9d9d9;
 }
@@ -784,7 +782,7 @@ body {
         -ms-flex: 4 4 auto;
             flex: 4 4 auto;
   }
-  .p-messageHeadContainer {
+  .p-message__headContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -814,7 +812,7 @@ body {
     min-width: 320px;
     height: 3.75em;
   }
-  .p-messageHeadContainer h2 {
+  .p-message__headContainer h2 {
     font-size: 1.5em;
   }
   .p-message img,
