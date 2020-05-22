@@ -683,6 +683,28 @@ body {
   }
 }
 
+/*** Recruit Banner ***/
+.p-recruit {
+  display: flex;
+  height: 80px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.p-recruit:hover {
+  opacity: 0.7;
+}
+.p-recruit img {
+  display: flex;
+  width: 300px;
+  height: 68px;
+}
+@media screen and (max-width: 959px) {
+  .p-recruit {
+    margin: 1em 1em 0 0;
+  }
+}
+
 /*** return nav ***/
 .p-returnNav__outer {
   margin-top: 1em;
@@ -729,37 +751,12 @@ body {
 /*************************** 再ネスト *****************************/
 /*********************** ↓ 未チェック ↓ *************************/
 
-.recruit {
-  display: flex;
-  height: 80px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-}
-
-.recruit:hover {
-  opacity: 0.7;
-}
-
-.recruit img {
-  display: flex;
-  width: 300px;
-  height: 68px;
-}
-
-@media screen and (max-width: 959px) {
-  .recruit {
-    margin: 1em 1em 0 0;
-  }
-}
-
-.linksBlock {
+.p-linksBlock {
   display: flex;
   margin-top: 16px;
   justify-content: space-between;
 }
-
-.linksBlock section {
+.p-linkSection {
   width: 310px;
 }
 
@@ -774,7 +771,7 @@ body {
 }
 
 @media screen and (max-width: 959px) {
-  .linksBlock {
+  .p-linksBlock {
     display: flex;
     flex-direction: column;
   }
@@ -783,24 +780,24 @@ body {
     display: none;
   }
 
-  .linksBlock .c-sectionBase {
+  .p-linksBlock .c-sectionBase {
     width: 100%;
   }
 
-  .linksBlock .c-sectionBase:not(:last-of-type) {
+  .p-linksBlock .c-sectionBase:not(:last-of-type) {
     border-bottom: none;
   }
 
-  .linksBlock .c-sectionHeading {
+  .p-linksBlock .c-sectionHeading {
     border-top-width: 1px;
   }
 
-  .linksBlock .c-sectionHeading h2 {
+  .p-linksBlock .c-sectionHeading h2 {
     margin: 0 auto;
     font-size: 1.125em;
   }
 
-  .linksBlock .c-sectionHeading h2 .english {
+  .p-linksBlock .c-sectionHeading h2 .english {
     display: none;
   }
 
