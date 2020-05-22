@@ -662,60 +662,7 @@ body {
   }
 }
 
-/*** return nav ***/
-.p-returnNav__outer {
-  margin-top: 1em;
-  height: 40px;
-}
-
-.p-returnNav {
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-.p-returnNav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 960px;
-  list-style: none;
-  text-align: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.p-returnNav__item {
-  font-size: 0.8125em;
-}
-
-.p-returnNav__icon {
-  margin-right: 4px;
-  color: #039;
-}
-
-@media screen and (max-width: 959px) {
-  .p-returnNav__outer {
-    display: none;
-  }
-}
-
-/* ======================================================
-   Utility
-   ====================================================== */
-/* Accessibility
-   ------------------------------------------------------ */
-.screen-reader-text {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  width: 1px;
-  height: 1px;
-}
-
-/*********************** ↑ チェック済 ↑ *************************/
-/*************************** 再ネスト *****************************/
-/*********************** ↓ 未チェック ↓ *************************/
+/*** Message ***/
 .p-message {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -812,7 +759,7 @@ body {
     min-width: 320px;
     height: 3.75em;
   }
-  .p-message__headContainer h2 {
+  .p-message__heading {
     font-size: 1.5em;
   }
   .p-message img,
@@ -833,11 +780,12 @@ body {
   }
 }
 
-.ir {
+/*** IR ***/
+.p-ir {
   position: relative;
 }
 
-.ir-body-upper {
+.p-ir__figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -847,8 +795,8 @@ body {
       justify-content: space-around;
 }
 
-.ir-body-upper-left,
-.ir-body-upper-right {
+.p-ir__figure-left,
+.p-ir__figure-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -864,18 +812,18 @@ body {
           justify-content: center;
 }
 
-.ir-body-upper-left:hover,
-.ir-body-upper-right:hover {
+.p-ir__figure-left:hover,
+.p-ir__figure-right:hover {
   opacity: 0.7;
 }
 
-.ir-body-upper-left img,
-.ir-body-upper-right img {
+.p-ir__figure-left img,
+.p-ir__figure-right img {
   height: 7.75em;
 }
 
 @media screen and (max-width: 959px) {
-  .ir {
+  .p-ir {
     margin: 1em 1em 0 0;
     min-width: 320px;
     height: 100px;
@@ -883,23 +831,23 @@ body {
         -ms-flex: 3 3 auto;
             flex: 3 3 auto;
   }
-  .ir .english,
-  .ir .c-sectionHeading__more,
-  .ir img,
-  .ir-body-lower {
+  .p-ir .english,
+  .p-ir .c-sectionHeading__more,
+  .p-ir img,
+  .p-ir__links {
     display: none;
   }
-  .ir-header {
+  .p-ir__header {
     height: 1.5em;
     border-top: none;
     border-bottom: solid 1px #d9d9d9;
     background: #fafafa;
     color: #039;
   }
-  .ir-body {
+  .p-ir__body {
     height: 4.75em;
   }
-  .ir-body-upper {
+  .p-ir__figure {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -908,7 +856,7 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .ir-body-upper div {
+  .p-ir__figure div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -917,13 +865,13 @@ body {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
   }
-  .ir-body-upper div:nth-of-type(1) {
+  .p-ir__figure div:nth-of-type(1) {
     border-right: solid 1px #d9d9d9;
   }
-  .ir-body-upper div:hover {
+  .p-ir__figure div:hover {
     background: #f0f0f0;
   }
-  .ir-body-upper div p:before {
+  .p-ir__figure div p:before {
     margin-right: 0.33333em;
     color: #039;
     content: "\f0da";
@@ -932,6 +880,60 @@ body {
   }
 }
 
+/*** return nav ***/
+.p-returnNav__outer {
+  margin-top: 1em;
+  height: 40px;
+}
+
+.p-returnNav {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.p-returnNav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 960px;
+  list-style: none;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.p-returnNav__item {
+  font-size: 0.8125em;
+}
+
+.p-returnNav__icon {
+  margin-right: 4px;
+  color: #039;
+}
+
+@media screen and (max-width: 959px) {
+  .p-returnNav__outer {
+    display: none;
+  }
+}
+
+/* ======================================================
+   Utility
+   ====================================================== */
+/* Accessibility
+   ------------------------------------------------------ */
+.screen-reader-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+}
+
+/*********************** ↑ チェック済 ↑ *************************/
+/*************************** 再ネスト *****************************/
+/*********************** ↓ 未チェック ↓ *************************/
 .recruit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -956,10 +958,6 @@ body {
   display: flex;
   width: 300px;
   height: 68px;
-}
-
-.recruit-heading {
-  display: none;
 }
 
 @media screen and (max-width: 959px) {
