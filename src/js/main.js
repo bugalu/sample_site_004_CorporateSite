@@ -34,12 +34,23 @@
   var body = document.getElementById("body");
   var bar = document.getElementById("bar");
   var close = document.getElementById("close");
+  var overlay = document.createElement("div")
 
+  /* ハンバーガーボタンクリック時の動作 */
   bar.addEventListener("click", function () {
     body.classList.add("isVisible");
+    body.appendChild(overlay);
+    overlay.classList.add("c-nav__overlay");
+    setTimeout(function () {
+      overlay.classList.add("fadeIn");
+    }, 100);
   });
-
+  /* 閉じるボタンクリック時の動作 */
   close.addEventListener("click", function () {
     body.classList.remove("isVisible");
+    overlay.classList.remove("fadeIn");
+    setTimeout(function () {
+      body.removeChild(overlay);
+    }, 1000);
   });
 }
