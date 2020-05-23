@@ -1,14 +1,15 @@
 "use strict";
 {
-  // slideshow------------------------------
-  const slide = document.getElementById("slide");
-  const slides = new Array(
+  /* Slide Show
+     ------------------------------------------------------ */
+  var slide = document.getElementById("slide");
+  var slides = new Array(
     "./img/top-image1.jpg",
     "./img/top-image2.jpg",
     "./img/top-image3.jpg",
     "./img/top-image4.jpg"
   );
-  let count = -1;
+  var count = -1;
   slide.style.opacity = 0;
   slideShow();
 
@@ -28,17 +29,17 @@
       slideShow();
     }, 10000);
   }
-  // drawer-menu
-  const body = document.getElementById("body");
-  const nav = document.getElementById("nav");
-  const bar = document.getElementById("bar");
-  const close = document.getElementById("close");
+  /* Drawer Menu
+     ------------------------------------------------------ */
+  var body = document.getElementById("body");
+  var bar = document.getElementById("bar");
+  var close = document.getElementById("close");
 
-  bar.addEventListener("click", () => {
+  bar.addEventListener("click", function () {
     body.classList.add("isVisible");
   });
 
-  close.addEventListener("click", () => {
+  close.addEventListener("click", function () {
     body.classList.remove("isVisible");
   });
 }
