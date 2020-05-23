@@ -305,11 +305,10 @@ body {
     height: auto;
     -webkit-box-shadow: 5px 5px 5px 0 #333;
             box-shadow: 5px 5px 5px 0 #333;
-    opacity: 0.9;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
   }
   .c-nav__list {
+    position: fixed;
+    top: -100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -317,9 +316,14 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 18.75em;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .isVisible .c-nav__list {
+    top: 0;
   }
   .c-nav__item {
+    width: 100%;
     padding-top: 0;
     height: 4.44444em;
     border-bottom: 1px solid #aaa;
@@ -543,6 +547,8 @@ body {
             align-items: center;
     -ms-flex-item-align: center;
         align-self: center;
+    height: 64px;
+    float: right;
   }
   .c-tabletMenu button {
     width: 5em;
@@ -843,7 +849,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 9.25em;
+  height: 9.5em;
   border-bottom: solid 1px #d9d9d9;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -873,7 +879,7 @@ body {
 
 .p-ir__figure-left img,
 .p-ir__figure-right img {
-  height: 7.75em;
+  height: 9em;
 }
 
 @media screen and (max-width: 959px) {
@@ -1280,4 +1286,15 @@ body {
 
 .u-noWrap {
   white-space: nowrap;
+}
+
+/* ======================================================
+   Status
+   ====================================================== */
+/* Drawer Menu
+   ------------------------------------------------------ */
+.isVisible {
+  top: 0;
+  left: 0;
+  right: 0;
 }

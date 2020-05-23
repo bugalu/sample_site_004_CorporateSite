@@ -29,15 +29,16 @@
     }, 10000);
   }
   // drawer-menu
+  const body = document.getElementById("body");
   const nav = document.getElementById("nav");
   const bar = document.getElementById("bar");
   const close = document.getElementById("close");
 
   bar.addEventListener("click", () => {
-    nav.classList.add("isVisible");
+    body.classList.add("isVisible");
   });
 
   close.addEventListener("click", () => {
-    nav.classList.remove("isVisible");
+    body.classList.remove("isVisible");
   });
 }
