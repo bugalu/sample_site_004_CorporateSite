@@ -337,16 +337,26 @@ body {
     display: none;
   }
   .c-nav__close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    -webkit-transform: translateY(-200%);
+        -ms-transform: translateY(-200%);
+            transform: translateY(-200%);
+    position: fixed;
+    top: 0.25em;
+    right: 0.25em;
     display: block;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .isVisible .c-nav__close {
     color: #039;
     cursor: pointer;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
-  .c-nav__close:hover {
+  .isVisible .c-nav__close:hover {
     color: #333;
     opacity: 0.7;
   }
@@ -550,7 +560,7 @@ body {
     height: 64px;
     float: right;
   }
-  .c-tabletMenu button {
+  .c-tabletMenu__englishButton {
     width: 5em;
     height: 1.375em;
     border: 2px solid #039;
@@ -558,7 +568,7 @@ body {
     background: #fafafa;
     font-size: 0.75em;
   }
-  .c-tabletMenu i {
+  .c-tabletMenu__hamburgerButton {
     margin-left: 1em;
     font-size: 2em;
     cursor: pointer;
