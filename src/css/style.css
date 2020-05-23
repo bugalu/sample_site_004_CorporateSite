@@ -801,15 +801,16 @@ body {
 
 @media screen and (max-width: 959px) {
   .p-message {
-    margin: 1em 0 0 0;
+    margin: 1em auto 0;
     min-width: 400px;
     cursor: pointer;
-    -webkit-box-flex: 4;
-        -ms-flex: 4 4 auto;
-            flex: 4 4 auto;
+    width: 60%;
+  }
+  .p-message__headContainer {
+    width: 100%;
   }
   .p-message__heading {
-    font-size: 0.875em;
+    font-size: 1em;
   }
   .p-message:hover {
     background: #f0f0f0;
