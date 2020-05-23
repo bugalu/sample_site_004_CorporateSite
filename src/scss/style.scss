@@ -94,7 +94,6 @@ body {
 .c-siteTitle__link {
   display: block;
   color: $key-color;
-  // vertical-align: middle;
   text-decoration: none;
   padding: 12px 0 12px;
   &:before {
@@ -246,11 +245,10 @@ body {
     z-index: 1;
     height: auto;
     box-shadow: 5px 5px 5px 0 #333;
-    // opacity: 0.9;
   }
   .c-nav__list {
     position: fixed;
-    top: -100%;
+    top: -200%;
     display: flex;
     flex-direction: column;
     transition: 0.5s;
@@ -261,11 +259,10 @@ body {
   .c-nav__item {
     width: 100%;
     padding-top: 0;
-    height: 4.44444em;
     border-bottom: 1px solid #aaa;
     background: #ddd;
     font-size: 1.125em;
-    line-height: 4.44444em;
+    line-height: 2.25em;
     cursor: pointer;
   }
   .c-nav__subList,
@@ -310,7 +307,6 @@ body {
 
 /*** Section Heading ***/
 .c-sectionHeading {
-  // position: relative;
   display: flex;
   padding: 1em 0.5em;
   border-top: 3px solid $key-color;
@@ -519,7 +515,6 @@ body {
 /*** p-news ***/
 .p-news {
   position: relative;
-  // height: 498px;
   flex: 0 1 635px;
 }
 .p-news__list {
@@ -580,11 +575,6 @@ body {
 }
 @media screen and (max-width: 959px) {
   .p-infoBlock {
-    // flex-direction: column;
-    // margin: 0;
-    // padding-left: 1em;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
     display: block;
     width: 100%;
     margin-left: 0;

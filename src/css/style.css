@@ -308,7 +308,7 @@ body {
   }
   .c-nav__list {
     position: fixed;
-    top: -100%;
+    top: -200%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -325,11 +325,10 @@ body {
   .c-nav__item {
     width: 100%;
     padding-top: 0;
-    height: 4.44444em;
     border-bottom: 1px solid #aaa;
     background: #ddd;
     font-size: 1.125em;
-    line-height: 4.44444em;
+    line-height: 2.25em;
     cursor: pointer;
   }
   .c-nav__subList,
