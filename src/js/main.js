@@ -53,4 +53,13 @@
       body.removeChild(overlay);
     }, 1000);
   });
+  /* News
+   ------------------------------------------------------ */
+  /* 一つ目のお知らせの日付を「今日」に固定 */
+  var today = document.getElementById("today");
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+  today.textContent = year + "." + month + "." + day;
 }
