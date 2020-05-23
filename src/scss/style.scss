@@ -559,11 +559,14 @@ body {
 }
 @media screen and (max-width: 959px) {
   .p-infoBlock {
-    flex-direction: row;
-    margin: 0;
-    padding-left: 1em;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    // flex-direction: column;
+    // margin: 0;
+    // padding-left: 1em;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+    display: block;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -608,29 +611,20 @@ body {
   font-size: 0.75em;
 }
 .p-message__ceoPhoto {
-  height: 120px;
+  height: 6.5em;
   img {
     height: 100%;
   }
 }
 @media screen and (max-width: 959px) {
   .p-message {
-    margin: 1em 1em 0 0;
+    margin: 1em 0 0 0;
     min-width: 400px;
-    height: 100px;
     cursor: pointer;
     flex: 4 4 auto;
   }
-  .p-message__headContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
   .p-message__heading {
     font-size: 0.875em;
-  }
-  .p-message img {
-    height: 100px;
   }
   .p-message:hover {
     background: #f0f0f0;
@@ -638,14 +632,23 @@ body {
   .p-message:hover img {
     opacity: 0.8;
   }
+  .p-message__ceoPhoto {
+    height: 6em;
+  }
 }
 @media screen and (max-width: 559px) {
   .p-message {
     min-width: 320px;
     height: 3.75em;
   }
+  .p-message__headContainer {
+    width: 100%;
+    border-right: none;
+  }
   .p-message__heading {
-    font-size: 1.5em;
+    font-size: 1.25em;
+    border: none;
+    text-align: center;
   }
   .p-message img,
   .p-message__heading-en,
@@ -660,6 +663,9 @@ body {
   }
   .p-message__heading-ja:after {
     margin-left: 8px;
+  }
+  .p-message__ceoPhoto {
+    display: none;
   }
 }
 
@@ -692,9 +698,8 @@ body {
 }
 @media screen and (max-width: 959px) {
   .p-ir {
-    margin: 1em 1em 0 0;
+    margin: 1em 0 0 0;
     min-width: 320px;
-    height: 100px;
     flex: 3 3 auto;
   }
   .p-ir .english,
@@ -711,7 +716,7 @@ body {
     color: $key-color;
   }
   .p-ir__body {
-    height: 4.75em;
+    height: 4em;
   }
   .p-ir__figure {
     display: flex;
@@ -757,7 +762,7 @@ body {
 }
 @media screen and (max-width: 959px) {
   .p-recruit {
-    margin: 1em 1em 0 0;
+    margin: 1em 0 0 0;
   }
 }
 
