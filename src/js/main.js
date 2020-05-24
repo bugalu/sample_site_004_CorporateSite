@@ -19,13 +19,13 @@
       count = 0;
     }
     slide.src = slides[count];
-    setTimeout(() => {
+    setTimeout(function () {
       slide.style.opacity = 1;
     }, 300);
-    setTimeout(() => {
+    setTimeout(function () {
       slide.style.opacity = 0;
     }, 9200);
-    setTimeout(() => {
+    setTimeout(function () {
       slideShow();
     }, 10000);
   }
