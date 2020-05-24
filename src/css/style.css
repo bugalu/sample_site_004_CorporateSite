@@ -99,7 +99,7 @@ body {
 
 .c-siteTitle__link {
   display: block;
-  color: #039;
+  color: #003399;
   text-decoration: none;
   padding: 12px 0 12px;
 }
@@ -149,7 +149,7 @@ body {
 }
 
 .c-supportMenu__link:hover {
-  color: #039;
+  color: #003399;
 }
 
 /*** Font Menu ***/
@@ -158,7 +158,7 @@ body {
   width: 20em;
   height: 2.66667em;
   border-radius: 0 0 6px 6px;
-  background-color: #039;
+  background-color: #003399;
   color: #fafafa;
   text-align: center;
   font-size: 0.75em;
@@ -245,43 +245,25 @@ body {
 
 .c-nav__subList {
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   visibility: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-top: 14px;
   opacity: 0;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   width: 10em;
   min-width: 100%;
 }
 
 .c-nav__subListItem {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 36px;
+  height: 3em;
+  line-height: 3em;
   border-bottom: solid 1px #d9d9d9;
   background: #fafafa;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  list-style-type: none;
 }
 
 .c-nav__subListItem:hover {
-  background: #039;
+  background: #003399;
 }
 
 .c-nav__subListItem:hover a {
@@ -347,7 +329,7 @@ body {
     transition: all 0.5s;
   }
   .isVisible .c-nav__close {
-    color: #039;
+    color: #003399;
     cursor: pointer;
     -webkit-transform: translateY(0%);
         -ms-transform: translateY(0%);
@@ -384,7 +366,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 1em 0.5em;
-  border-top: 3px solid #039;
+  border-top: 3px solid #003399;
   background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), color-stop(65%, #fafafa), to(#eee));
   background: linear-gradient(#fafafa 0%, #fafafa 65%, #eee 100%);
   line-height: 1;
@@ -416,7 +398,7 @@ body {
 
 .c-sectionHeading__more::before {
   margin-right: 4px;
-  color: #039;
+  color: #003399;
   content: "\f152";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
@@ -491,7 +473,7 @@ body {
 }
 
 .c-box__linksItem:before {
-  color: #039;
+  color: #003399;
   content: "\f0da";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
@@ -535,7 +517,7 @@ body {
   }
   .c-box__linksItem a:before {
     margin-right: 6px;
-    color: #039;
+    color: #003399;
     content: "\f152";
     vertical-align: 2px;
     font-weight: 900;
@@ -567,7 +549,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin-right: 0.75em;
-    color: #039;
+    color: #003399;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -579,7 +561,7 @@ body {
   .c-tabletMenu__englishButton {
     width: 5em;
     height: 1.375em;
-    border: 2px solid #039;
+    border: 2px solid #003399;
     border-radius: 4px;
     background: #fafafa;
     font-size: 0.75em;
@@ -755,7 +737,7 @@ body {
 }
 
 .p-message__heading {
-  color: #039;
+  color: #003399;
   border-bottom: solid 1px #d9d9d9;
   position: relative;
   font-size: 0.75em;
@@ -918,7 +900,7 @@ body {
     border-top: none;
     border-bottom: solid 1px #d9d9d9;
     background: #fafafa;
-    color: #039;
+    color: #003399;
   }
   .p-ir__body {
     height: 4em;
@@ -949,7 +931,7 @@ body {
   }
   .p-ir__figure div p:before {
     margin-right: 0.33333em;
-    color: #039;
+    color: #003399;
     content: "\f0da";
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
@@ -1078,7 +1060,7 @@ body {
 
 .p-returnNav__icon {
   margin-right: 4px;
-  color: #039;
+  color: #003399;
 }
 
 @media screen and (max-width: 959px) {
@@ -1157,7 +1139,7 @@ body {
 
 .p-footerLinks__heading:before {
   margin-right: 6px;
-  color: #039;
+  color: #003399;
   content: "\f152";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
@@ -1186,7 +1168,7 @@ body {
 }
 
 .p-footerLinks__item:before {
-  color: #039;
+  color: #003399;
   content: "\f0da";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
@@ -1257,7 +1239,7 @@ body {
 }
 
 .p-footerNav__item:before {
-  color: #039;
+  color: #003399;
   margin-right: 4px;
   content: "\f152";
   font-weight: 900;

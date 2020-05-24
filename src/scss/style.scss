@@ -7,7 +7,7 @@
    ------------------------------------------------------ */
 /*** color ***/
 $main-color: #fafafa;
-$key-color: #039;
+$key-color: #003399;
 $border-color: #d9d9d9;
 
 /* Default Style
@@ -135,7 +135,7 @@ body {
   text-decoration: none;
   color: inherit;
   &:hover {
-    color: #039;
+    color: $key-color;
   }
 }
 
@@ -207,23 +207,19 @@ body {
 }
 .c-nav__subList {
   z-index: 1;
-  display: flex;
   visibility: hidden;
-  flex-direction: column;
   margin-top: 14px;
   opacity: 0;
   transition: 0.2s ease-in;
-  justify-content: flex-start;
   width: 10em;
   min-width: 100%;
 }
 .c-nav__subListItem {
-  display: flex;
-  flex-direction: column;
-  height: 36px;
+  height: 3em;
+  line-height: 3em;
   border-bottom: solid 1px $border-color;
   background: $main-color;
-  justify-content: center;
+  list-style-type: none;
   &:hover {
     background: $key-color;
     a {
