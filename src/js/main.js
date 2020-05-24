@@ -32,13 +32,18 @@
   /* Drawer Menu
      ------------------------------------------------------ */
   var body = document.getElementById("body");
-  var bar = document.getElementById("bar");
+  var open = document.getElementById("open");
   var close = document.getElementById("close");
   var overlay = document.createElement("div")
 
   /* ハンバーガーボタンクリック時の動作 */
-  bar.addEventListener("click", function () {
+  open.addEventListener("click", function () {
     body.classList.add("isVisible");
+    if (open.getAttribute("aria-expanded") == "false") {
+      open.setAttribute("aria-expanded", true);
+    } else {
+      open.setAttribute("aria-expanded", false);
+    };
     body.appendChild(overlay);
     overlay.classList.add("c-nav__overlay");
     setTimeout(function () {
@@ -48,6 +53,11 @@
   /* 閉じるボタンクリック時の動作 */
   close.addEventListener("click", function () {
     body.classList.remove("isVisible");
+    if (open.getAttribute("aria-expanded") == "false") {
+      open.setAttribute("aria-expanded", true);
+    } else {
+      open.setAttribute("aria-expanded", false);
+    };
     overlay.classList.remove("fadeIn");
     setTimeout(function () {
       body.removeChild(overlay);

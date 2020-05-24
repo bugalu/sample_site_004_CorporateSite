@@ -69,8 +69,8 @@
           <div class="p-userSupports__site-menu-tb">
             <button class="c-tabletMenu__englishButton">English</button>
           </div>
-          <button class="c-tabletMenu__hamburgerButton">
-            <i class="fas fa-bars" id="bar"></i>
+          <button type="button" class="c-tabletMenu__hamburgerButton"  id="open" aria-controls="nav__list" aria-expanded="false">
+            <i class="fas fa-bars"></i>
           </button>
         </div>
         <!-- /.p-userSupports-tab -->
@@ -78,9 +78,9 @@
       <!-- /.container -->
     </div>
     <!-- head-container end -->
-    <nav class="c-nav" id="nav">
+    <nav role="navigation" class="c-nav" id="nav">
       <h2 class="screen-reader-text">サイト内メニュー</h2>
-      <ul class="c-nav__list">
+      <ul class="c-nav__list" id="nav__list">
         <li class="c-nav__item">
           企業情報<span class="english" lang="en">Company Profile</span>
           <ul class="c-nav__subList">
