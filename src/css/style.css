@@ -657,6 +657,15 @@ body {
   font-size: 0.875em;
 }
 
+.p-new__topNewsText {
+  margin-bottom: 0.5em;
+}
+
+.p-news__innerList {
+  -webkit-margin-start: 2.5em;
+          margin-inline-start: 2.5em;
+}
+
 @media screen and (max-width: 959px) {
   .p-news {
     height: 100%;
