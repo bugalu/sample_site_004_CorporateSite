@@ -66,10 +66,11 @@
   /* News
    ------------------------------------------------------ */
   /* 一つ目のお知らせの日付を「今日」に固定 */
-  var today = document.getElementById("today");
+  var topNewsDate = document.getElementById("topNewsDate");
   var date = new Date();
   var year = date.getFullYear();
   var month = date.getMonth() + 1;
   var day = date.getDate();
-  today.textContent = year + "." + month + "." + day;
+  topNewsDate.setAttribute("datetime", year + "-" + month + "-" + day);
+  topNewsDate.textContent = year + "." + month + "." + day;
 }
