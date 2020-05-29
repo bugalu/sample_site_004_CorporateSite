@@ -127,7 +127,7 @@ body {
 
 /*** Support Menu ***/
 .c-supportMenu {
-  margin-top: 6px;
+  margin-top: 8px;
   overflow: hidden;
   list-style: none;
   font-size: 0.75em;
@@ -154,30 +154,48 @@ body {
 
 /*** Font Menu ***/
 .c-fontMenu {
-  margin-left: 16px;
-  width: 20em;
+  display: inline-block;
+  margin: 6px 0 0 2em;
   height: 2.66667em;
   border-radius: 0 0 6px 6px;
-  background-color: #003399;
   color: #fafafa;
-  text-align: center;
+  text-align: right;
   font-size: 0.75em;
 }
 
-.c-fontMenu th {
-  width: 6.66667em;
-  color: #fafafa;
+.c-fontMenu__heading {
+  display: inline-block;
+  font-size: 1em;
   font-weight: normal;
+  margin-right: 0.5em;
+  color: #003399;
 }
 
-.c-fontMenu td {
-  width: 2.83333em;
-  border-left: solid 1px #d9d9d9;
+input[type="radio"] {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+.c-fontMenu__label {
+  display: inline-block;
+  margin: 0;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  border: 2px solid #003399;
+  background-color: #fafafa;
+  color: #003399;
+  line-height: calc(2em - 4px);
   cursor: pointer;
 }
 
-.c-fontMenu td:hover {
-  background-color: #1a4db3;
+.c-fontMenu__input:checked + .c-fontMenu__label {
+  background-color: navy;
+  color: #fffff0;
+  outline-color: #4d90fe;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
 
 /*** Navigation ***/

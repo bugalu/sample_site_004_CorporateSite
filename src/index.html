@@ -61,15 +61,18 @@
             </li>
           </ul>
 
-          <table class="c-fontMenu">
-            <!-- TODO:tableやめてulとbuttonで作り直し -->
-            <tr>
-              <th>文字サイズ</th>
-              <td>小</td>
-              <td>中</td>
-              <td>大</td>
-            </tr>
-          </table>
+          <section class="c-fontMenu">
+            <h2 class="c-fontMenu__heading"> フォントサイズ</h2>
+            <input class="c-fontMenu__input" type="radio" id="small" name="font-size" value="small">
+            <label class="c-fontMenu__label" for="small">小</label>
+
+            <input class="c-fontMenu__input" type="radio" id="medium" name="font-size" value="medium" checked="checked">
+            <label class="c-fontMenu__label" for="medium">中</label>
+
+            <input class="c-fontMenu__input" type="radio" id="large" name="font-size" value="large">
+            <label class="c-fontMenu__label" for="large">大</label>
+          </section>
+          <!-- /.c-fontMenu -->
         </div>
         <!-- /.p-userSupports -->
         <div class="c-tabletMenu">
