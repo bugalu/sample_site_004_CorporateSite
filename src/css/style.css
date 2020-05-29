@@ -662,8 +662,7 @@ body {
 }
 
 .p-news__innerList {
-  -webkit-margin-start: 2.5em;
-          margin-inline-start: 2.5em;
+  margin-left: 2.5em;
 }
 
 @media screen and (max-width: 959px) {
