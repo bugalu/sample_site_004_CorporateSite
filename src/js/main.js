@@ -63,6 +63,19 @@
       body.removeChild(overlay);
     }, 1000);
   });
+  /* Page Top (Return Top)
+     ------------------------------------------------------ */
+  var pageTop = document.getElementById("js-returnNav__pageTop");
+  pageTop.addEventListener('click', function (e) {
+    e.preventDefault();
+    var timer = setInterval(function () {
+      if (window.scrollY <= 0 || window.pageYOffset <= 0) {
+        clearInterval(timer);
+      }
+      window.scrollBy(0, -20);
+    }, 1);
+  });
+
   /* News
    ------------------------------------------------------ */
   /* 一つ目のお知らせの日付を「今日」に固定 */
