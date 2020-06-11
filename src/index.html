@@ -66,11 +66,11 @@
             <input class="c-fontMenu__input" type="radio" id="btnFontMedium" name="font-size" value="fontMedium" checked>
             <label class="c-fontMenu__label" for="btnFontMedium">標準</label>
 
-            <input class="c-fontMenu__input" type="radio" id="btnXLarge" name="font-size" value="fontXLarge">
-            <label class="c-fontMenu__label" for="btnXLarge">1.5倍</label>
+            <input class="c-fontMenu__input" type="radio" id="btnFontXLarge" name="font-size" value="fontXLarge">
+            <label class="c-fontMenu__label" for="btnFontXLarge">1.5倍</label>
 
-            <input class="c-fontMenu__input" type="radio" id="btnXXLarge" name="font-size" value="fontXXLarge">
-            <label class="c-fontMenu__label" for="btnXXLarge">2倍</label>
+            <input class="c-fontMenu__input" type="radio" id="btnFontXXLarge" name="font-size" value="fontXXLarge">
+            <label class="c-fontMenu__label" for="btnFontXXLarge">2倍</label>
           </section>
           <!-- /.c-fontMenu -->
         </div>
@@ -168,10 +168,13 @@
         </div>
         <ul class="p-news__list">
           <li class="p-news__item">
-            <time datetime="2020-01-01" id="topNewsDate">2020.01.01</time>
-            <div class="c-tag -blue">Info</div>
-            <div>
-              <p class="p-new__topNewsText">
+            <div class="p-news__header">
+              <time datetime="2020-01-01" id="topNewsDate">2020.01.01</time>
+              <div class="p-news__tag -blue">Info</div>
+            </div>
+            <!-- /.p-news__header -->
+            <div class="p-news__body">
+              <p class="p-news__topNewsText">
                 当サイトは<a href="https://or-ikeda.net">ORイケダ</a>による制作サンプルサイトです。
               </p>
               <ul class="p-news__innerList">
@@ -189,49 +192,68 @@
                 </li>
               </ul>
             </div>
+            <!-- /.p-news__body -->
 
           </li>
           <li class="p-news__item">
-            <time datetime="2020-05-23">2020.5.23</time>
-            <div class="c-tag -green">Code</div>
-            <p>
+            <div class="p-news__header">
+              <time datetime="2020-05-23">2020.5.23</time>
+              <div class="p-news__tag -green">Code</div>
+            </div>
+            <!-- /.p-news__header -->
+            <p class="p-news__body">
               CSSは<a href="https://github.com/hiloki/flocss">FLOCSS</a>を意識したスタイルで記述しました。
             </p>
           </li>
           <li class="p-news__item">
-            <time datetime="2019-12-02">2019.12.2</time>
-            <div class="c-tag -green">Code</div>
-            <p>
+            <div class="p-news__header">
+              <time datetime="2019-12-02">2019.12.2</time>
+              <div class="p-news__tag -green">Code</div>
+            </div>
+            <!-- /.p-news__header -->
+            <p class="p-news__body">
                 モバイルデバイスへのレイアウト対応を完了しました。画面幅959px以下はタブレットに、また559px以下はスマートフォンに最適化したデザインとなります。
               </p>
           </li>
           <li class="p-news__item">
-            <time datetime="2019-11-18">2019.11.18</time>
-            <div class="c-tag -pink">Note</div>
-            <p>
+            <div class="p-news__header">
+              <time datetime="2019-11-18">2019.11.18</time>
+              <div class="p-news__tag -pink">Note</div>
+            </div>
+            <!-- /.p-news__header -->
+            <p class="p-news__body">
                 グローバルナビゲーションのドロップダウンメニュー化を完了しました。これにより、サブメニューが表示されるようになりました。jQueryのプラグインなどは使用せずCSSのみで実装しています。
               </p>
           </li>
           <li class="p-news__item">
-            <time datetime="2019-11-17">2019.11.17</time>
-            <div class="c-tag -green">Code</div>
-            <p>
+            <div class="p-news__header">
+              <time datetime="2019-11-17">2019.11.17</time>
+              <div class="p-news__tag -green">Code</div>
+            </div>
+            <!-- /.p-news__header -->
+            <p class="p-news__body">
                 メインビジュアルにスライドショーを実装しました。プラグインは使用せずシンプルなJavaScriptで記述しました。
               </p>
           </li>
           <li class="p-news__item">
-            <time datetime="2019-11-16">2019.11.16</time>
-            <div class="c-tag -green">Code</div>
-            <p>
+            <div class="p-news__header">
+              <time datetime="2019-11-16">2019.11.16</time>
+              <div class="p-news__tag -green">Code</div>
+            </div>
+            <!-- /.p-news__header -->
+            <p class="p-news__body">
                 <s>当サイトは、現時点ではMicrosoft社製のブラウザ「Internet
                 Explorer」には対応しておりません。「Internet
                 Explorer」で閲覧した場合、レイアウトの崩れが生じるなど、快適なブラウジングが出来ない場合があります。</s>
               </p>
           </li>
           <li class="p-news__item">
-            <time datetime="2019-11-16">2019.11.16</time>
-            <div class="c-tag -pink">Note</div>
-            <p>
+            <div class="p-news__header">
+              <time datetime="2019-11-16">2019.11.16</time>
+              <div class="p-news__tag -pink">Note</div>
+            </div>
+            <!-- /.p-news__header -->
+            <p class="p-news__body">
                 当サイトでは、バナーを含む全ての画像について、素材サイト<a
                   href="https://jp.freepik.com/home">freepik</a>のものを使用しております。当事務所はfreepikの正規ユーザであるため画像利用に関するクレジットは表記しておりません。
               </p>

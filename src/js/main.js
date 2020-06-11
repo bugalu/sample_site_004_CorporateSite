@@ -63,6 +63,24 @@
       body.removeChild(overlay);
     }, 1000);
   });
+  /* Font Size Change
+   ------------------------------------------------------ */
+  var btnFontMedium = document.getElementById('btnFontMedium');
+  var btnFontXLarge = document.getElementById('btnFontXLarge');
+  var btnFontXXLarge = document.getElementById('btnFontXXLarge');
+  //標準
+  btnFontMedium.addEventListener('click', function () {
+    body.style.fontSize = '16px';
+  });
+  //1.5倍
+  btnFontXLarge.addEventListener('click', function () {
+    body.style.fontSize = '24px';
+  });
+  //2倍
+  btnFontXXLarge.addEventListener('click', function () {
+    body.style.fontSize = '32px';
+  });
+
   /* Page Top (Return Top)
      ------------------------------------------------------ */
   var pageTop = document.getElementById("js-returnNav__pageTop");
