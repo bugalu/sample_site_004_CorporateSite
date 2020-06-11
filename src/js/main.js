@@ -68,17 +68,32 @@
   var btnFontMedium = document.getElementById('btnFontMedium');
   var btnFontXLarge = document.getElementById('btnFontXLarge');
   var btnFontXXLarge = document.getElementById('btnFontXXLarge');
+
+  //文字サイズ2倍時のp-ir__header内の英文を改行
+  var irEnglish = document.getElementById('p-ir__english');
+  function XXLargeRemove() {
+    if (irEnglish.classList.contains('XXLarge')) {
+      irEnglish.classList.remove('XXLarge');
+    }
+  }
+
   //標準
   btnFontMedium.addEventListener('click', function () {
     body.style.fontSize = '16px';
+    //英文の改行を解消
+    XXLargeRemove();
   });
   //1.5倍
   btnFontXLarge.addEventListener('click', function () {
     body.style.fontSize = '24px';
+    //英文を改行
+    irEnglish.classList.add('XXLarge');
   });
   //2倍
   btnFontXXLarge.addEventListener('click', function () {
     body.style.fontSize = '32px';
+    //英文を改行
+    irEnglish.classList.add('XXLarge');
   });
 
   /* Page Top (Return Top)

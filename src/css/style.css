@@ -260,7 +260,7 @@ input[type="radio"] {
 .c-nav__twoLines {
   display: inline-block;
   line-height: 1;
-  margin-bottom: 0.25em;
+  margin: 0.25em -0.125em;
 }
 
 .c-nav__subList {
@@ -635,9 +635,9 @@ input[type="radio"] {
   overflow: hidden;
   vertical-align: middle;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 11em;
-          flex: 1 1 11em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 192px;
+          flex: 0 0 192px;
 }
 
 .p-news__header time {
@@ -670,10 +670,10 @@ input[type="radio"] {
 
 .p-news__body {
   margin-left: 16px;
-  max-width: 432px;
+  max-width: 600px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 27em;
-          flex: 1 1 27em;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .p-news__topNewsText {
@@ -869,6 +869,11 @@ input[type="radio"] {
 /*** IR ***/
 .p-ir {
   position: relative;
+}
+
+.p-ir__header .english.XXLarge:before {
+  content: "\A";
+  white-space: pre;
 }
 
 .p-ir__figure {
