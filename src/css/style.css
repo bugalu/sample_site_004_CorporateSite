@@ -224,6 +224,7 @@ input[type="radio"] {
 }
 
 .c-nav__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,7 +232,6 @@ input[type="radio"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 1em;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(25%, #fafafa), to(#eee));
   background: linear-gradient(#fafafa 0, #fafafa 25%, #eee 100%);
   -webkit-box-shadow: 0 1px 1px 0 #e0e0e0;
@@ -240,9 +240,9 @@ input[type="radio"] {
   font-size: 0.875em;
   cursor: pointer;
   width: calc(16.66667% - 4px);
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .c-nav__item:hover {
@@ -251,25 +251,40 @@ input[type="radio"] {
 }
 
 .c-nav__item:hover .c-nav__subList {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
+  position: absolute;
+  top: 100%;
+  display: block;
+  -webkit-animation: opacity 0.3s forwards;
+          animation: opacity 0.3s forwards;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .c-nav__twoLines {
   display: inline-block;
   line-height: 1;
-  margin: 0.25em -0.125em;
+  margin: 0 -0.125em;
 }
 
 .c-nav__subList {
   z-index: 1;
-  visibility: hidden;
-  margin-top: 14px;
-  opacity: 0;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
+  display: none;
   width: 10em;
   min-width: 100%;
 }
