@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/bugalu/sample_site_002_CorporateSite#readme",
   "devDependencies": {
-    "autoprefixer": "^9.8.0",
-    "browser-sync": "^2.26.7",
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
     "css-declaration-sorter": "^5.1.2",
     "gulp": "^4.0.2",
     "gulp-ejs": "^5.1.0",
