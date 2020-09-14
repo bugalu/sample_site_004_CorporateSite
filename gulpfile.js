@@ -10,14 +10,14 @@ const browserSync = require('browser-sync');
 const server = browserSync.create();
 
 function compile() {
-  return src('./src/ejs/*.ejs')
+  return src(['./src/ejs/**/*.ejs', '!' + './src/ejs/**/_*.ejs'])
     .pipe($.ejs({}, {}, { ext: ".html" }))
     .pipe($.rename({ extname: ".html" }))
-    .pipe(dest('./dist'));
+    .pipe(dest('./dist/'));
 }
 
 function styles() {
-  return src('./src/sass/*.scss')
+  return src('./src/sass/**/*.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass())
     .pipe($.postcss([

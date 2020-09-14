@@ -205,7 +205,6 @@ input[type="radio"] {
   box-shadow: 0 1px 1px 0 #e0e0e0;
   text-align: center;
   font-size: 0.875em;
-  cursor: pointer;
   width: calc(16.66667% - 4px);
   justify-content: center;
   &:hover {
@@ -226,6 +225,11 @@ input[type="radio"] {
     }
   }
 }
+.c-nav__item a {
+  text-decoration: none;
+  color: #333;
+}
+
 .c-nav__twoLines {
   display: inline-block;
   line-height: 1;
