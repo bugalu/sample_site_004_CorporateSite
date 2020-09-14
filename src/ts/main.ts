@@ -7,7 +7,7 @@ const slides: string[] = [
   "./img/top-image3.jpg",
   "./img/top-image4.jpg"
 ];
-let count = -1;
+let count: number = -1;
 slide.style.opacity = '0';
 slideShow();
 
@@ -30,9 +30,9 @@ function slideShow() {
 /* Drawer Menu
    ------------------------------------------------------ */
 const body = document.getElementById("body");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
-var overlay = document.createElement("div")
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+const overlay = document.createElement("div")
 
 /* ハンバーガーボタンクリック時の動作 */
 openBtn.addEventListener("click", function () {
@@ -63,12 +63,12 @@ closeBtn.addEventListener("click", function () {
 });
 /* Font Size Change
  ------------------------------------------------------ */
-var btnFontMedium = document.getElementById('btnFontMedium');
-var btnFontXLarge = document.getElementById('btnFontXLarge');
-var btnFontXXLarge = document.getElementById('btnFontXXLarge');
+const btnFontMedium = document.getElementById('btnFontMedium');
+const btnFontXLarge = document.getElementById('btnFontXLarge');
+const btnFontXXLarge = document.getElementById('btnFontXXLarge');
 
 //文字サイズ2倍時のp-ir__header内の英文を改行
-var irEnglish = document.getElementById('p-ir__english');
+const irEnglish = document.getElementById('p-ir__english');
 function XXLargeRemove() {
   if (irEnglish.classList.contains('XXLarge')) {
     irEnglish.classList.remove('XXLarge');
@@ -96,10 +96,10 @@ btnFontXXLarge.addEventListener('click', function () {
 
 /* Page Top (Return Top)
    ------------------------------------------------------ */
-var pageTop = document.getElementById("js-returnNav__pageTop");
+const pageTop = document.getElementById("js-returnNav__pageTop");
 pageTop.addEventListener('click', function (e) {
   e.preventDefault();
-  var timer = setInterval(function () {
+  let timer = setInterval(function () {
     if (window.scrollY <= 0 || window.pageYOffset <= 0) {
       clearInterval(timer);
     }
@@ -110,10 +110,10 @@ pageTop.addEventListener('click', function (e) {
 /* News
  ------------------------------------------------------ */
 /* 一つ目のお知らせの日付を「今日」に固定 */
-var topNewsDate = document.getElementById("topNewsDate");
-var date = new Date();
-var year = date.getFullYear();
-var month = date.getMonth() + 1;
-var day = date.getDate();
+const topNewsDate = document.getElementById("topNewsDate");
+const date = new Date();
+const year: number = date.getFullYear();
+const month: number = date.getMonth() + 1;
+const day: number = date.getDate();
 topNewsDate.setAttribute("datetime", year + "-" + month + "-" + day);
 topNewsDate.textContent = year + "." + month + "." + day;
