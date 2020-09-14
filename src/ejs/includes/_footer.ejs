@@ -19,19 +19,29 @@
   </div>
   <!-- /.p-returnNav end -->
 
+<!-- Topページと下層ページでimageのパスを書き分ける -->
+  <%
+  let imagePath = '';
+  if(meta === 'Top') {
+    imagePath = './img/';
+  } else {
+    imagePath = '../img/';
+  }; %>
+<!-- ----------- -->
+
   <div class="p-links__wrapper">
     <div class="p-links__container">
       <section class="p-banners">
         <h2 class="p-banners__heading">グループ会社Webサイト</h2>
         <div class="p-banners__grid">
-          <img src="./img/banner1.jpg" alt="halloween sale" class="p-banners_img" />
-          <img src="./img/banner2.jpg" alt="2020" class="p-banners_img" />
-          <img src="./img/banner3.jpg" alt="merry christmas" class="p-banners_img" />
-          <img src="./img/banner4.jpg" alt="pizza" class="p-banners_img" />
-          <img src="./img/banner5.jpg" alt="black friday" class="p-banners_img" />
-          <img src="./img/banner6.jpg" alt="bollywood" class="p-banners_img" />
-          <img src="./img/banner7.jpg" alt="sale" class="p-banners_img" />
-          <img src="./img/banner8.jpg" alt="alarm" class="p-banners_img" />
+          <img src="<%= imagePath %>banner1.jpg" alt="halloween sale" class="p-banners_img" />
+          <img src="<%= imagePath %>banner2.jpg" alt="2020" class="p-banners_img" />
+          <img src="<%= imagePath %>banner3.jpg" alt="merry christmas" class="p-banners_img" />
+          <img src="<%= imagePath %>banner4.jpg" alt="pizza" class="p-banners_img" />
+          <img src="<%= imagePath %>banner5.jpg" alt="black friday" class="p-banners_img" />
+          <img src="<%= imagePath %>banner6.jpg" alt="bollywood" class="p-banners_img" />
+          <img src="<%= imagePath %>banner7.jpg" alt="sale" class="p-banners_img" />
+          <img src="<%= imagePath %>banner8.jpg" alt="alarm" class="p-banners_img" />
         </div>
       </section>
       <div class="p-footerLinks">

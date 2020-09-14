@@ -1,12 +1,19 @@
 <!DOCTYPE html>
+<% const title = 'Company' %>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample004 | 企業情報</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title><%= title %> | Sample004</title>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css?202006121445" />
 </head>
 <body>
 <%- include('../includes/_header'); %>
+<%- include('../includes/_footer', {meta: title}); %>
 </body>
 </html>
