@@ -6,8 +6,9 @@
 .Trashes
 Thumbs.db
 
-#バージョン管理不要
-node_modules/
-prepros.config
-prepros.crt
+
+#管理不要
 .vscode/
+node_modules/
+.tsconfig.json
+prepros.config
