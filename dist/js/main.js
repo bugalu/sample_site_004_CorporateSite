@@ -113,7 +113,9 @@ var date = new Date();
 var year = date.getFullYear();
 var month = date.getMonth() + 1;
 var day = date.getDate();
-topNewsDate.setAttribute("datetime", year + "-" + month + "-" + day);
-topNewsDate.textContent = year + "." + month + "." + day;
+var monthStr = String(month).padStart(2, '0');
+var dayStr = String(day).padStart(2, '0');
+topNewsDate.setAttribute("datetime", "".concat(year, "-").concat(monthStr, "-").concat(dayStr));
+topNewsDate.textContent = "".concat(year, ".").concat(monthStr, ".").concat(dayStr);
 
 //# sourceMappingURL=main.js.map
